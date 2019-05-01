@@ -23,7 +23,7 @@ body {
     margin: 0;
     z-index: 1;
     background-image: url("../img/mainPage/background.png");
-    background-size: 100%;
+    background-size: cover;
     /* -webkit-background-size: cover;
     -o-background-size: cover; */
     background-position-x: center;
@@ -70,7 +70,7 @@ body {
     flex-direction: column;
     align-items: center;
     /* justify-content: center; */
-    background-size: 100%;
+    background-size: cover;
     background-position-x: center;
     background-position-y: top;
     background-repeat: no-repeat;
@@ -82,9 +82,10 @@ body {
     display: none;
 }
 .photoWallPage .goBack{
-    position: relative;
+    /* position: relative; */
+    position: absolute;
     top: 6.5%;
-    right: 2%;
+    left: 5%;
 }
 .photoWallPage .back {
     /* margin-top: 10%;
@@ -120,7 +121,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-size: 100%;
+    background-size: cover;
     background-position-x: center;
     background-position-y: top;
     background-repeat: no-repeat;
@@ -132,9 +133,10 @@ body {
     display: none;
 }
 .timeCapsulePage .goBack{
-    position: relative;
+    /* position: relative; */
+    position: absolute;
     top: 6.5%;
-    right: 2%;
+    left: 5%;
 }
 .timeCapsulePage .back {
     /* margin-top: 10%;
@@ -185,7 +187,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-size: 100%;
+    background-size: cover;
     background-position-x: center;
     background-position-y: top;
     background-repeat: no-repeat;
@@ -197,9 +199,11 @@ body {
     display: none;
 }
 .wishDreamPage .goBack{
-    position: relative;
+    /* position: relative; */
+    position: absolute;
     top: 6.5%;
-    right: 2%;
+    left: 5%;
+    /* right: 2%; */
 }
 .wishDreamPage .back {
     /* margin-top: 10%;
@@ -211,7 +215,7 @@ body {
 }
 
 .wishDreamPage .titleBox {
-    margin-top: 25%;
+    margin-top: 26%;
     margin-left: 23%;
     margin-bottom: 2%;
 }
@@ -219,8 +223,8 @@ body {
     width: 70%;
 }
 .wishDreamPage .contentBox{
-    margin-left: 11.4%;
-    margin-right: 11%;
+    margin-left: 11.2%;
+    margin-right: 34.35%;
 }
 .wishDreamPage .content {
     text-align: left;
@@ -229,17 +233,17 @@ body {
 }
 .wishDreamPage .arrow{
     position: relative;
-    width: 24%;
-    height: 12%;
-    right: -28%;
-    bottom: -3.5%;
+    width: 17%;
+    height: 10.6%;
+    right: -30.5%;
+    bottom: -8%;
 }
 .wishDreamPage .icon{
     position: relative;
-    right: -30%;
-    bottom: -4%;
-    width: 14.2%;
-    height: 6%;
+    right: -34%;
+    bottom: -8%;
+    width: 16.2%;
+    height: 7%;
 }
 .creativeMarketPage.show {
     background-image: url("../img/sectionPages/creativeMarket/background.png");
@@ -249,7 +253,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-size: 100%;
+    background-size: cover;
     background-position-x: center;
     background-position-y: top;
     background-repeat: no-repeat;
@@ -261,9 +265,10 @@ body {
     display: none;
 }
 .creativeMarketPage .goBack{
-    position: relative;
+    /* position: relative; */
+    position: absolute;
     top: 6.5%;
-    right: 2%;
+    left: 5%;
 }
 .creativeMarketPage .back {
     /* margin-top: 10%;
@@ -299,7 +304,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-size: 100%;
+    background-size: cover;
     background-position-x: center;
     background-position-y: top;
     background-repeat: no-repeat;
@@ -311,9 +316,10 @@ body {
     display: none;
 }
 .timeStationPage .goBack{
-    position: relative;
+    /* position: relative; */
+    position: absolute;
     top: 6.5%;
-    right: 2%;
+    left: 5%;
 }
 .timeStationPage .back {
     /* margin-top: 10%;
@@ -333,7 +339,7 @@ body {
     width: 70%;
 }
 .timeStationPage .contentBox{
-    margin-left: 11.4%;
+    margin-left: 11.3%;
     margin-right: 11%;
 }
 .timeStationPage .content {
@@ -343,15 +349,15 @@ body {
 }
 .timeStationPage .arrow{
     position: relative;
-    width: 23%;
-    height: 12%;
-    right: -30%;
+    width: 21.2%;
+    height: 10.5%;
+    right: -32.2%;
     bottom: 0.5%;
 }
 .timeStationPage .icon{
     position: relative;
-    right: -34%;
+    right: -36.1%;
     bottom: 0%;
-    width: 20%;
-    height: 7%;
+    width: 16.5%;
+    height: 6.1%;
 }
