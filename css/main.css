@@ -1,12 +1,10 @@
-html {
-    height: 100%;
-    width: 100%;
-}
-
+html,
 body {
-    margin: 0;
-    width: 100%;
     height: 100%;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    /* overflow-y: scroll; */
 }
 
 .show {
@@ -17,13 +15,343 @@ body {
     display: none;
 }
 
-.mainPage {
+
+.mainPage.show {
     position: fixed;
     height: 100%;
     width: 100%;
+    margin: 0;
     z-index: 1;
-    background-image: url("../img/wish.jpg");
-    background-size: cover;
-    background-position: center center;
+    background-image: url("../img/mainPage/background.png");
+    background-size: 100%;
+    /* -webkit-background-size: cover;
+    -o-background-size: cover; */
+    background-position-x: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+.mainPage.hide {
+    display: none;
+}
+.mainPage .grad_title {
+    margin-top: 21%;
+    margin-bottom: 5.625%;
+    /* margin-top: 228px;
+    margin-bottom: 108px; */
+}
+
+.mainPage .graduation {
+    height: 19.5%;
+    /* height: 375px; */
+    width: 100%;
+}
+
+.mainPage .activities {
+    margin-top: 12%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content:center; */
+    align-items: center;
+    cursor: pointer;
+}
+
+.mainPage .activity {
+    height: 15%;
+    width: 60%;
+    margin-bottom: 3%
+}
+
+.photoWallPage.show {
+    background-image: url("../img/sectionPages/photoWall/background.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    background-size: 100%;
+    background-position-x: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+}
+.photoWallPage.hide{
+    display: none;
+}
+.photoWallPage .goBack{
+    position: relative;
+    top: 6.5%;
+    right: 2%;
+}
+.photoWallPage .back {
+    /* margin-top: 10%;
+    margin-left: 5%; */
+    width: 30.4%;
+    height: 10%;
+    /* width: 296px;
+    height:97px; */
+}
+
+.photoWallPage .titleBox {
+    margin-top: 25%;
+    margin-left: 23%;
+    margin-bottom: 2%;
+}
+.photoWallPage .title{
+    width: 70%;
+}
+.photoWallPage .contentBox{
+    margin-left: 11.4%;
+    margin-right: 11%;
+}
+.photoWallPage .content {
+    text-align: left;
+    font-size: 14px;
+    line-height:25px;
+}
+.timeCapsulePage.show {
+    background-image: url("../img/sectionPages/timeCapsule/background.png");
+    background-size: 100% auto;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: 100%;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+}
+.timeCapsulePage.hide{
+    display: none;
+}
+.timeCapsulePage .goBack{
+    position: relative;
+    top: 6.5%;
+    right: 2%;
+}
+.timeCapsulePage .back {
+    /* margin-top: 10%;
+    margin-left: 5%; */
+    width: 30.4%;
+    height: 10%;
+    /* width: 296px;
+    height:97px; */
+}
+
+.timeCapsulePage .titleBox {
+    margin-top: 25%;
+    margin-left: 23%;
+    margin-bottom: 2%;
+}
+.timeCapsulePage .title{
+    width: 70%;
+}
+.timeCapsulePage .contentBox{
+    margin-left: 10.3%;
+    margin-right: 26.7%;
+}
+.timeCapsulePage .content {
+    text-align: left;
+    font-size: 14px;
+    line-height:25px;
+}
+
+.timeCapsulePage .arrow{
+    position: relative;
+    width: 23%;
+    height: 12%;
+    right: -34%;
+    bottom: 2.5%;
+}
+.timeCapsulePage .icon{
+    position: relative;
+    right: -37%;
+    bottom: 5%;
+    width: 14.2%;
+    height: 9.4%;
+}
+.wishDreamPage.show {
+    background-image: url("../img/sectionPages/wishDream/background.png");
+    background-size: 100% auto;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: 100%;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+}
+.wishDreamPage.hide{
+    display: none;
+}
+.wishDreamPage .goBack{
+    position: relative;
+    top: 6.5%;
+    right: 2%;
+}
+.wishDreamPage .back {
+    /* margin-top: 10%;
+    margin-left: 5%; */
+    width: 30.4%;
+    height: 10%;
+    /* width: 296px;
+    height:97px; */
+}
+
+.wishDreamPage .titleBox {
+    margin-top: 25%;
+    margin-left: 23%;
+    margin-bottom: 2%;
+}
+.wishDreamPage .title{
+    width: 70%;
+}
+.wishDreamPage .contentBox{
+    margin-left: 11.4%;
+    margin-right: 11%;
+}
+.wishDreamPage .content {
+    text-align: left;
+    font-size: 14px;
+    line-height:25px;
+}
+.wishDreamPage .arrow{
+    position: relative;
+    width: 24%;
+    height: 12%;
+    right: -28%;
+    bottom: -3.5%;
+}
+.wishDreamPage .icon{
+    position: relative;
+    right: -30%;
+    bottom: -4%;
+    width: 14.2%;
+    height: 6%;
+}
+.creativeMarketPage.show {
+    background-image: url("../img/sectionPages/creativeMarket/background.png");
+    background-size: 100% auto;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: 100%;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+}
+.creativeMarketPage.hide{
+    display: none;
+}
+.creativeMarketPage .goBack{
+    position: relative;
+    top: 6.5%;
+    right: 2%;
+}
+.creativeMarketPage .back {
+    /* margin-top: 10%;
+    margin-left: 5%; */
+    width: 30.4%;
+    height: 10%;
+    /* width: 296px;
+    height:97px; */
+}
+
+.creativeMarketPage .titleBox {
+    margin-top: 25%;
+    margin-left: 23%;
+    margin-bottom: 2%;
+}
+.creativeMarketPage .title{
+    width: 70%;
+}
+.creativeMarketPage .contentBox{
+    margin-left: 11.4%;
+    margin-right: 11%;
+}
+.creativeMarketPage .content {
+    text-align: left;
+    font-size: 14px;
+    line-height:25px;
+}
+.timeStationPage.show {
+    background-image: url("../img/sectionPages/timeStation/background.png");
+    background-size: 100% auto;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: 100%;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+}
+.timeStationPage.hide{
+    display: none;
+}
+.timeStationPage .goBack{
+    position: relative;
+    top: 6.5%;
+    right: 2%;
+}
+.timeStationPage .back {
+    /* margin-top: 10%;
+    margin-left: 5%; */
+    width: 30.4%;
+    height: 10%;
+    /* width: 296px;
+    height:97px; */
+}
+
+.timeStationPage .titleBox {
+    margin-top: 25%;
+    margin-left: 23%;
+    margin-bottom: 2%;
+}
+.timeStationPage .title{
+    width: 70%;
+}
+.timeStationPage .contentBox{
+    margin-left: 11.4%;
+    margin-right: 11%;
+}
+.timeStationPage .content {
+    text-align: left;
+    font-size: 14px;
+    line-height:25px;
+}
+.timeStationPage .arrow{
+    position: relative;
+    width: 23%;
+    height: 12%;
+    right: -30%;
+    bottom: 0.5%;
+}
+.timeStationPage .icon{
+    position: relative;
+    right: -34%;
+    bottom: 0%;
+    width: 20%;
+    height: 7%;
 }

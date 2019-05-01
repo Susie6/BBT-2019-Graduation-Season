@@ -3,80 +3,152 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="css/main.css" rel="stylesheet">
     <title>毕业季总宣</title>
 </head>
 
 <body>
-    <div id="loadingPage" class="loadingPage"></div>
     <div id="startingPage" class="startingPage"></div>
-    <div id="mainPage" class="mainPage ">
-        <div id="activities" class="activities hide">
-            <img src="./img/go.png" alt="activity" class="activity_right" id="timeCapsule"
-                name="timeCapsule">
-            <img src="./img/go.png" alt="activity" class="activity_left" id="wishDream"
-                name="wishDream">
-            <img src="./img/go.png" alt="activity" class="activity_right" id="photoWall"
-                name="photoWall">
-            <img src="./img/go.png" alt="activity" class="activity_left" id="creativeMarket"
+    <div id="mainPage" class="mainPage show">
+        <div class="grad_title">
+            <img src="./img/mainPage/graduation.png" alt="graduation" class="graduation" id="graduation"
+                name="graduation">
+        </div>
+        <div id="activities" class="activities">
+            <img src="./img/mainPage/photoWall.png" alt="activity" class="activity" id="photoWall" name="photoWall">
+            <img src="./img/mainPage/creativeMarket.png" alt="activity" class="activity" id="creativeMarket"
                 name="creativeMarket">
-            <img src="./img/go.png" alt="activity" class="activity_right" id="timeStation"
+            <img src="./img/mainPage/timeCapsule.png" alt="activity" class="activity" id="timeCapsule"
+                name="timeCapsule">
+            <img src="./img/mainPage/timeStation.png" alt="activity" class="activity" id="timeStation"
                 name="timeStation">
+            <img src="./img/mainPage/wishDream.png" alt="activity" class="activity" id="wishDream" name="wishDream">
         </div>
     </div>
-    <div id="sectionPages" class="sectionPages hide">
-        <div id="timeCapsulePage" class="page hide">
-            <div id="goBack" class="goBack">
-                <span>返回主页</span>
-            </div>
-            <div id="titleBox_timeCapsule" class="titleBox">
-                <h3 id="title_timeCapsule" class="title"></h3>
-            </div>
-            <div id="contentBox_timeCapsule" class="contentBox">
-                <p class="content"></p>
-            </div>
-            <input type="image" src="img/go.png" id="goTimeCapsule" class="goBtn" alt="查看">
+    <!-- <div id="sectionPages" class="sectionPages hide"> -->
+
+    <div id="photoWallPage" class="photoWallPage hide">
+        <div id="photoWallBack" class="goBack">
+            <img src="./img/sectionPages/photoWall/back.png" alt="back" class="back" id="photoWall_back"
+                name="photoWall_back">
         </div>
-        <div id="wishDreamPage" class="page hide">
-            <div id="titleBox_wishDream" class="titleBox">
-                <h3 id="title_wishDream" class="title"></h3>
-            </div>
-            <div id="contentBox_wishDream" class="contentBox">
-                <p class="content"></p>
-            </div>
-            <input type="image" src="img/go.png" id="goWishDream" class="goBtn" alt="查看">
+        <div id="titleBox_photoWall" class="titleBox">
+            <img src="./img/sectionPages/photoWall/title.png" alt="title" class="title" id="photoWall_title"
+                name="photoWall_title">
         </div>
-        <div id="photoWallPage" class="page hide">
-            <div id="titleBox_photoWall" class="titleBox">
-                <h3 id="title_photoWall" class="title"></h3>
-            </div>
-            <div id="contentBox_photoWall" class="contentBox">
-                <p class="content"></p>
-            </div>
-            <input type="image" src="img/go.png" id="goPhotoWall" class="goBtn" alt="查看">
-        </div>
-        <div id="creativeMarketPage" class="page hide">
-            <div id="titleBox_creativeMarket" class="titleBox">
-                <h3 id="title_creativeMarket" class="title"></h3>
-            </div>
-            <div id="contentBox_creativeMarket" class="contentBox">
-                <p class="content"></p>
-            </div>
-            <input type="image" src="img/go.png" id="goCreativeMarket" class="goBtn" alt="查看">
-        </div>
-        <div id="timeStationPage" class="page hide">
-            <div id="titleBox_timeStation" class="titleBox">
-                <h3 id="title_timeStation" class="title"></h3>
-            </div>
-            <div id="contentBox_timeStation" class="contentBox">
-                <p class="content"></p>
-            </div>
-            <input type="image" src="img/go.png" id="goTimeStation" class="goBtn" alt="查看">
+        <div id="contentBox_photoWall" class="contentBox">
+            <p class="content">逻辑上的外祖母悖论与目前技术的显然不成熟限制了时空旅行
+                <br />人脑活力的减退让记忆按着艾宾浩斯画定的曲线逐渐失帧
+                <br />回溯上一个时间节点，最简便的方式仍是当时将其封存在照片里
+                <br />你是否保存着某些意义非凡的照片?</p>
+            <p class="content"><strong>6月6日至7日 一饭二饭</strong>
+                <br />我们提供了照片墙，帮助你向大家分享那时的激动、喜悦、骄傲……</p>
         </div>
     </div>
-    <script src="/js/animation.js"></script>
+    <div id="creativeMarketPage" class="creativeMarketPage hide">
+        <div id="creativeMarketBack" class="goBack">
+            <img src="./img/sectionPages/creativeMarket/back.png" alt="back" class="back" id="creativeMarket_back"
+                name="creativeMarket_back">
+        </div>
+        <div id="titleBox_creativeMarket" class="titleBox">
+            <img src="./img/sectionPages/creativeMarket/title.png" alt="title" class="title" id="creativeMarket_title"
+                name="creativeMarket_title">
+        </div>
+        <div id="contentBox_creativeMarket" class="contentBox">
+            <p class="content">悄然初夏，白驹过隙
+                <br /><strong>6月5日至7日二饭门前</strong>
+                <br />我们交汇在这个十字路口，即将启程
+                <br />我们通过设计将大学的点滴回忆融入到在创意市集的产品中，让它们和你的梦想
+                <br />一起伴你前行，让大学时光永不磨灭</p>
+            <p class="content">本次活动收益将以华南理工大学百步梯的名义爱心捐出。</p>
+        </div>
+    </div>
+    <div id="timeCapsulePage" class="timeCapsulePage hide">
+        <div id="timeCapsuleBack" class="goBack">
+            <img src="./img/sectionPages/timeCapsule/back.png" alt="back" class="back" id="timeCapsule_back"
+                name="timeCapsule_back">
+        </div>
+        <div id="titleBox_timeCapsule" class="titleBox">
+            <img src="./img/sectionPages/timeCapsule/title.png" alt="title" class="title" id="timeCapsule_title"
+                name="timeCapsule_title">
+        </div>
+        <div id="contentBox_timeCapsule" class="contentBox">
+            <p class="content">曲水流觞，纸短情长
+                <br />有没有一句很多年未曾说出口的话
+                <br />有没有一份想寄予信纸表露出的情
+                <br />有没有一个与未来的自己所做的约定
+            </p>
+            <p class="content"><strong>5月15日至31日</strong>
+                <br />线下<strong>一饭二饭</strong>领取信封信纸
+                <br />线上文字语音替你收藏</p>
+            <p class="content">给半年/一年后的TA写下书信
+                <br />投递到时光邮筒中
+                <br />用手中的笔划出字字情意
+                <br />让这份穿越时光的信封带上你
+                <br />前往未来</p>
+        </div>
+        <!-- <div class="go"> -->
+        <img src="./img/sectionPages/timeCapsule/arrow.png" alt="arrow" class="arrow" id="timeCapsule_arrow"
+            name="timeCapsule_arrow">
+        <input type="image" src="img/sectionPages/timeCapsule/icon.png" id="timeCapsule_icon" class="icon" alt="时光胶囊">
+        <!-- </div> -->
+    </div>
+    <div id="timeStationPage" class="timeStationPage hide">
+        <div id="timeStationBack" class="goBack">
+            <img src="./img/sectionPages/timeStation/back.png" alt="back" class="back" id="timeStation_back"
+                name="timeStation_back">
+        </div>
+        <div id="titleBox_timeStation" class="titleBox">
+            <img src="./img/sectionPages/timeStation/title.png" alt="title" class="title" id="timeStation_title"
+                name="timeStation_title">
+        </div>
+        <div id="contentBox_timeStation" class="contentBox">
+            <p class="content">四年前，走进车站，从熟悉的街道来到陌生的长廊，慢慢地相遇，慢慢地亲密
+                <br />白驹过隙，流光溢彩
+                <br />四年了，车站满载着无尽的思念和期许，汽笛声最后一次响起，细数过往，心中满溢着的是欢喜、感动与期待</p>
+            <p class="content"><strong>5月29日至31日</strong>
+                <br />来<strong>一饭二饭</strong>摊位领取你的专属车票吧！</p>
+            <p class="content">作为毕业季的全新子活动，梯仔准备了满满的惊喜哦！</p>
+        </div>
+        <!-- <div class="go"> -->
+        <img src="./img/sectionPages/timeStation/arrow.png" alt="arrow" class="arrow" id="photoWall_arrow"
+            name="photoWall_arrow">
+        <input type="image" src="img/sectionPages/timeStation/icon.png" id="photoWall_icon" class="icon" alt="流年车站">
+        <!-- </div> -->
+    </div>
+    <div id="wishDreamPage" class="wishDreamPage hide">
+        <div id="wishDreamPageBack" class="goBack">
+            <img src="./img/sectionPages/wishDream/back.png" alt="back" class="back" id="wishDream_back"
+                name="wishDream_back">
+        </div>
+        <div id="titleBox_wishDream" class="titleBox">
+            <img src="./img/sectionPages/wishDream/title.png" alt="title" class="title" id="wishDream_title"
+                name="wishDream_title">
+        </div>
+        <div id="contentBox_wishDream" class="contentBox">
+            <p class="content">你是否会有些遗憾，像飞雪一样
+                <br />在身体里猝然涌现，倏然消失
+                <br />你是否还有些愿望，像精灵一般
+                <br />在内心中跳动，但不曾实现</p>
+            <p class="content"><strong>5月22日至24日</strong>
+                <br /><strong>一饭二饭</strong>有你专属的精灵球
+                <br />召唤宝可梦帮你实现愿望</p>
+            <p class="content">心之所愿，有人实现
+                <br />只有期待，只等你来</p>
+        </div>
+        <!-- <div class="go"> -->
+        <img src="./img/sectionPages/wishDream/arrow.png" alt="arrow" class="arrow" id="wishDream_arrow"
+            name="photoWall_arrow">
+        <input type="image" src="img/sectionPages/wishDream/icon.png" id="wishDream_icon" class="icon" alt="许愿宝可梦">
+        <!-- </div> -->
+        <!-- </div> -->
+
+
+
+    </div>
+    <script src="./js/animation.js"></script>
 </body>
 
 </html>
