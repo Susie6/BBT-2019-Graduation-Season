@@ -33,9 +33,11 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .mainPage.hide {
     display: none;
 }
+
 .mainPage .grad_title {
     margin-top: 20%;
     margin-bottom: 12%;
@@ -63,11 +65,13 @@ body {
     width: 60%;
     margin-bottom: 3%
 }
-.mainPage .activity_last{
+
+.mainPage .activity_last {
     height: 15%;
     width: 60%;
     margin-bottom: 10%;
 }
+
 .photoWallPage.show {
     background-image: url("../img/sectionPages/photoWall/background.png");
     display: flex;
@@ -82,10 +86,12 @@ body {
     width: 100%;
     height: 100%;
 }
-.photoWallPage.hide{
+
+.photoWallPage.hide {
     display: none;
 }
-.photoWallPage .goBack{
+
+.photoWallPage .goBack {
     position: relative;
     /* position: absolute; */
     /* top: 6.5%;
@@ -94,6 +100,7 @@ body {
     margin-right: 10%;
     cursor: pointer;
 }
+
 .photoWallPage .back {
     /* margin-top: 10%;
     margin-left: 5%; */
@@ -112,21 +119,25 @@ body {
     margin-bottom: 2%;
 
 }
-.photoWallPage .title{
+
+.photoWallPage .title {
     width: 70%;
 }
-.photoWallPage .contentBox{
+
+.photoWallPage .contentBox {
     margin-left: 11.4%;
     margin-right: 11%;
 }
+
 .photoWallPage .content {
-  
+
     text-align: left;
     font-size: 0.875em;
     line-height: 1.8em;
-    font-family: SimHei ;
+    font-family: SimHei;
     color: #333333;
 }
+
 .timeCapsulePage.show {
     background-image: url("../img/sectionPages/timeCapsule/background.png");
     background-size: 100% auto;
@@ -143,10 +154,12 @@ body {
     width: 100%;
     height: 100%;
 }
-.timeCapsulePage.hide{
+
+.timeCapsulePage.hide {
     display: none;
 }
-.timeCapsulePage .goBack{
+
+.timeCapsulePage .goBack {
     /* position: relative; */
     /* position: absolute; */
     /* top: 6.5%;
@@ -155,6 +168,7 @@ body {
     margin-right: 10%;
     cursor: pointer;
 }
+
 .timeCapsulePage .back {
     /* margin-top: 10%;
     margin-left: 5%; */
@@ -171,10 +185,12 @@ body {
     margin-left: 23%;
     margin-bottom: 0%;
 }
-.timeCapsulePage .title{
+
+.timeCapsulePage .title {
     width: 70%;
 }
-.timeCapsulePage .contentBox{
+
+.timeCapsulePage .contentBox {
     margin-left: 10.3%;
     margin-right: 26.7%;
     margin-bottom: 7%;
@@ -182,15 +198,16 @@ body {
     height: 50%;
     overflow: scroll;
 }
+
 .timeCapsulePage .content {
     text-align: left;
     font-size: 1em;
     line-height: 1.8em;
-    font-family: SimHei ;
+    font-family: SimHei;
     color: #333333;
 }
 
-.timeCapsulePage .arrow{
+.timeCapsulePage .arrow {
     /* position: relative; */
     width: 21.2%;
     height: 11%;
@@ -199,7 +216,8 @@ body {
     margin-left: 60%;
     margin-bottom: -5.1%;
 }
-.timeCapsulePage .icon{
+
+.timeCapsulePage .icon {
     /* position: relative; */
     /* right: -33%; */
     /* bottom: 5%; */
@@ -209,6 +227,7 @@ body {
     margin-left: 64.6%;
     margin-bottom: 11%;
 }
+
 .wishDreamPage.show {
     background-image: url("../img/sectionPages/wishDream/background.png");
     background-size: 100% auto;
@@ -225,10 +244,12 @@ body {
     width: 100%;
     height: 100%;
 }
-.wishDreamPage.hide{
+
+.wishDreamPage.hide {
     display: none;
 }
-.wishDreamPage .goBack{
+
+.wishDreamPage .goBack {
     position: relative;
     /* position: absolute; */
     /* top: 6.5%;
@@ -237,6 +258,7 @@ body {
     margin-right: 10%;
     cursor: pointer;
 }
+
 .wishDreamPage .back {
     /* margin-top: 10%;
     margin-left: 5%; */
@@ -253,10 +275,12 @@ body {
     margin-left: 23%;
     margin-bottom: 0%;
 }
-.wishDreamPage .title{
+
+.wishDreamPage .title {
     width: 70%;
 }
-.wishDreamPage .contentBox{
+
+.wishDreamPage .contentBox {
     margin-left: 11.2%;
     margin-right: 34.35%;
     /* margin-bottom: 15%; */
@@ -264,14 +288,16 @@ body {
     height: 43.625%;
     overflow-y: scroll;
 }
+
 .wishDreamPage .content {
     text-align: left;
     font-size: 0.875em;
     line-height: 1.8em;
-    font-family: SimHei ;
+    font-family: SimHei;
     color: #333333;
 }
-.wishDreamPage .arrow{
+
+.wishDreamPage .arrow {
     /* position: relative; */
     width: 17%;
     height: 10.6%;
@@ -282,7 +308,8 @@ body {
     margin-top: 15%;
     margin-bottom: 0%;
 }
-.wishDreamPage .icon{
+
+.wishDreamPage .icon {
     /* position: relative; */
     /* right: -31.3%; */
     width: 16.2%;
@@ -293,6 +320,7 @@ body {
     margin-left: 65%;
     margin-bottom: 11%;
 }
+
 .creativeMarketPage.show {
     background-image: url("../img/sectionPages/creativeMarket/background.png");
     background-size: 100% auto;
@@ -309,10 +337,12 @@ body {
     width: 100%;
     height: 100%;
 }
-.creativeMarketPage.hide{
+
+.creativeMarketPage.hide {
     display: none;
 }
-.creativeMarketPage .goBack{
+
+.creativeMarketPage .goBack {
     position: relative;
     /* position: absolute; */
     /* top: 6.5%;
@@ -321,6 +351,7 @@ body {
     margin-right: 10%;
     cursor: pointer;
 }
+
 .creativeMarketPage .back {
     /* margin-top: 10%;
     margin-left: 5%; */
@@ -337,20 +368,24 @@ body {
     margin-left: 23%;
     margin-bottom: 2%;
 }
-.creativeMarketPage .title{
+
+.creativeMarketPage .title {
     width: 70%;
 }
-.creativeMarketPage .contentBox{
+
+.creativeMarketPage .contentBox {
     margin-left: 11.4%;
     margin-right: 11%;
 }
+
 .creativeMarketPage .content {
     text-align: left;
     font-size: 0.875em;
     line-height: 1.8em;
-    font-family: SimHei ;
+    font-family: SimHei;
     color: #333333;
 }
+
 .timeStationPage.show {
     background-image: url("../img/sectionPages/timeStation/background.png");
     background-size: 100% auto;
@@ -367,10 +402,12 @@ body {
     width: 100%;
     height: 100%;
 }
-.timeStationPage.hide{
+
+.timeStationPage.hide {
     display: none;
 }
-.timeStationPage .goBack{
+
+.timeStationPage .goBack {
     position: relative;
     /* position: absolute; */
     /* top: 6.5%;
@@ -379,6 +416,7 @@ body {
     margin-right: 10%;
     cursor: pointer;
 }
+
 .timeStationPage .back {
     /* margin-top: 10%;
     margin-left: 5%; */
@@ -395,10 +433,12 @@ body {
     margin-left: 23%;
     margin-bottom: 0%;
 }
-.timeStationPage .title{
+
+.timeStationPage .title {
     width: 70%;
 }
-.timeStationPage .contentBox{
+
+.timeStationPage .contentBox {
     width: 77.7%;
     height: 47.5%;
     overflow: scroll;
@@ -406,14 +446,16 @@ body {
     margin-right: 11%;
     margin-bottom: 8%;
 }
+
 .timeStationPage .content {
     text-align: left;
     font-size: 0.875em;
     line-height: 1.8em;
-    font-family: SimHei ;
+    font-family: SimHei;
     color: #333333;
 }
-.timeStationPage .arrow{
+
+.timeStationPage .arrow {
     /* position: relative; */
     width: 21.2%;
     height: 11%;
@@ -424,7 +466,8 @@ body {
     margin-left: 58%;
     margin-bottom: 1%;
 }
-.timeStationPage .icon{
+
+.timeStationPage .icon {
     /* position: relative;
     right: -31.3%;
     bottom: 0%; */
@@ -435,4 +478,69 @@ body {
     cursor: pointer;
     margin-left: 64%;
     margin-bottom: 11%;
+}
+
+.fadeOut {
+    -webkit-animation: fadeOut 0.7s ease both;
+    -moz-animation: fadeOut 0.7s ease both;
+    animation: fadeOut 0.7s ease both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.fadeFromLeft {
+    -webkit-animation: fadeFromLeft 0.7s ease both;
+    -moz-animation: fadeFromLeft 0.7s ease both;
+    animation: fadeFromLeft 0.7s ease both;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeFromLeft {
+    from {
+        opacity: 0.3;
+        -webkit-transform: translateX(-100%);
+    }
+    to{
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@-moz-keyframes fadeFromLeft {
+    from {
+        opacity: 0.3;
+        -moz-transform: translateX(-100%);
+    }
+    to{
+        opacity: 1;
+        -moz-transform: translateX(0);
+    }
+}
+
+@keyframes fadeFromLeft {
+    from {
+        opacity: 0.3;
+        transform: translateX(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

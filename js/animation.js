@@ -22,12 +22,15 @@ var creativeMarket_back = document.getElementById("creativeMarket_back");
 var timeCapsule_back = document.getElementById("timeCapsule_back");
 var timeStation_back = document.getElementById("timeStation_back");
 var wishDream_back = document.getElementById("wishDream_back");
+
 //跳转
-var go = {
-    goTimeCapsule: document.getElementById("goTimeCapsule"),
-    goWishDream: document.getElementById("goWishDream"),
-    goPhotoWall: document.getElementById("goPhotoWall"),
-};
+var iconTimeStation = document.getElementById("timeStation_icon");
+var iconWishDream = document.getElementById("wishDream_icon");
+var iconTimeCapsule = document.getElementById("timeCapsule_icon");
+
+iconTimeStation.addEventListener("click", goTimeStation);
+iconWishDream.addEventListener("click", goWishDream);
+iconTimeCapsule.addEventListener("click", goTimeCapsule);
 
 photoWall_back.addEventListener("click", hidePhotoWall);
 creativeMarket_back.addEventListener("click", hideCreateMarket);
@@ -35,15 +38,16 @@ timeCapsule_back.addEventListener("click", hideTimeCapsule);
 timeStation_back.addEventListener("click", hideTimeStation);
 wishDream_back.addEventListener("click", hideWishDream);
 
-btn.addEventListener("click",show);
+btn.addEventListener("click", show);
 
 function show(event) {
     var click = event.target.id;
-    var show_this = document.getElementById(click+"Page");
+    var show_this = document.getElementById(click + "Page");
     console.log(show_this);
     mainPage.classList.remove("show");
     mainPage.classList.add("hide");
     show_this.classList.remove("hide");
+    //show_this.classList.add("fadeFromTop");
     show_this.classList.add("show");
 }
 
@@ -54,27 +58,101 @@ function hidePhotoWall() {
     photoWall.classList.add("hide");
 }
 
-function hideCreateMarket(){
+function hideCreateMarket() {
     mainPage.classList.remove("hide");
     mainPage.classList.add("show");
     creativeMarket.classList.remove("show");
     creativeMarket.classList.add("hide");
 }
-function hideTimeCapsule(){
+
+function hideTimeCapsule() {
     mainPage.classList.remove("hide");
     mainPage.classList.add("show");
     timeCapsule.classList.remove("show");
     timeCapsule.classList.add("hide");
 }
-function hideTimeStation(){
+
+function hideTimeStation() {
     mainPage.classList.remove("hide");
     mainPage.classList.add("show");
     timeStation.classList.remove("show");
     timeStation.classList.add("hide");
 }
-function hideWishDream(){
+
+function hideWishDream() {
     mainPage.classList.remove("hide");
     mainPage.classList.add("show");
     wishDream.classList.remove("show");
     wishDream.classList.add("hide");
+}
+var mainCount, timeCapsuleCount, timeStationCount, wishDreamCount;
+// var name = {
+//     "zongxuan": mainCount,
+//     "sgjn": timeCapsuleCount,
+//     "lncz": timeStationCount,
+//     "xybkm": wishDreamCount,
+// }
+window.onload = function count() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            var res = JSON.parse(xhttp.responseText);
+            if (res.errcode == 0) {
+                console.log(res.msg);
+                console.log("总访问次数：" + res.data.zongxuan + "次");
+            } else {
+                console.log(res.msg);
+            }
+        }
+    };
+    xhttp.open("POST", "http://111.230.183.100/zongxuan/zongxuan.php", true);
+    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    var name = "zongxuan";
+    JSON.stringify(name);
+    xhttp.send("name=" + name);
+}
+
+function goTimeStation(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            console.log("流年车站");
+        }
+    };
+    xhttp.open("POST", "http://111.230.183.100/zongxuan/zongxuan.php", true);
+    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    var name = "lncz";
+    JSON.stringify(name);
+    xhttp.send("name=" + name);
+    // window.location.href =
+}
+
+function goTimeCapsule(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            console.log("时光胶囊");
+        }
+    };
+    xhttp.open("POST", "http://111.230.183.100/zongxuan/zongxuan.php", true);
+    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    var name = "sgjn";
+    JSON.stringify(name);
+    xhttp.send("name=" + name);
+    // window.location.href =
+}
+
+function goWishDream(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            console.log("许愿宝可梦");
+        }
+    };
+    xhttp.open("POST", "http://111.230.183.100/zongxuan/zongxuan.php", true);
+    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    console.log(name);
+    JSON.stringify(name);
+    xhttp.send("name=" + name);
+    // window.location.href =
 }
