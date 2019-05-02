@@ -103,12 +103,14 @@ body {
     min-height: 32.4px;
     /* width: 296px;
     height:97px; */
+    flex: 1;
 }
 
 .photoWallPage .titleBox {
     margin-top: 4.9%;
     margin-left: 23%;
     margin-bottom: 2%;
+
 }
 .photoWallPage .title{
     width: 70%;
@@ -118,6 +120,7 @@ body {
     margin-right: 11%;
 }
 .photoWallPage .content {
+  
     text-align: left;
     font-size: 0.875em;
     line-height: 1.8em;
@@ -174,6 +177,9 @@ body {
 .timeCapsulePage .contentBox{
     margin-left: 10.3%;
     margin-right: 26.7%;
+    width: 62.2%;
+    height: 55.25%;
+    overflow: scroll;
 }
 .timeCapsulePage .content {
     text-align: left;
@@ -380,6 +386,9 @@ body {
     width: 70%;
 }
 .timeStationPage .contentBox{
+    width: 77.7%;
+    height: 47.5%;
+    overflow: scroll;
     margin-left: 11.3%;
     margin-right: 11%;
     margin-bottom: 3%;
