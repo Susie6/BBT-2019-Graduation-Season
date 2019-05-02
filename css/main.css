@@ -24,10 +24,10 @@ body {
     z-index: 1;
     background-image: url("../img/mainPage/background.png");
     background-size: cover;
-    /* -webkit-background-size: cover;
-    -o-background-size: cover; */
+    -webkit-background-size: cover;
+    -o-background-size: cover;
     background-position-x: center;
-    background-position-y: top;
+    background-position-y: bottom;
     background-repeat: no-repeat;
     overflow-y: scroll;
     display: flex;
@@ -53,9 +53,9 @@ body {
     margin-top: 12%;
     display: flex;
     flex-direction: column;
-    /* justify-content:center; */
     align-items: center;
     cursor: pointer;
+    margin-bottom: 10%;
 }
 
 .mainPage .activity {
@@ -72,7 +72,7 @@ body {
     /* justify-content: center; */
     background-size: cover;
     background-position-x: center;
-    background-position-y: top;
+    background-position-y: bottom;
     background-repeat: no-repeat;
     overflow-y: scroll;
     width: 100%;
@@ -82,10 +82,11 @@ body {
     display: none;
 }
 .photoWallPage .goBack{
-    /* position: relative; */
-    position: absolute;
+    position: relative;
+    /* position: absolute; */
     top: 6.5%;
-    left: 5%;
+    right: 3.5%;
+    cursor: pointer;
 }
 .photoWallPage .back {
     /* margin-top: 10%;
@@ -123,7 +124,7 @@ body {
     align-items: center;
     background-size: cover;
     background-position-x: center;
-    background-position-y: top;
+    background-position-y: bottom;
     background-repeat: no-repeat;
     overflow-y: scroll;
     width: 100%;
@@ -133,10 +134,11 @@ body {
     display: none;
 }
 .timeCapsulePage .goBack{
-    /* position: relative; */
-    position: absolute;
+    position: relative;
+    /* position: absolute; */
     top: 6.5%;
-    left: 5%;
+    right: 3.5%;
+    cursor: pointer;
 }
 .timeCapsulePage .back {
     /* margin-top: 10%;
@@ -178,6 +180,7 @@ body {
     bottom: 5%;
     width: 14.2%;
     height: 9.4%;
+    cursor: pointer;
 }
 .wishDreamPage.show {
     background-image: url("../img/sectionPages/wishDream/background.png");
@@ -189,7 +192,7 @@ body {
     align-items: center;
     background-size: cover;
     background-position-x: center;
-    background-position-y: top;
+    background-position-y: bottom;
     background-repeat: no-repeat;
     overflow-y: scroll;
     width: 100%;
@@ -199,11 +202,11 @@ body {
     display: none;
 }
 .wishDreamPage .goBack{
-    /* position: relative; */
-    position: absolute;
+    position: relative;
+    /* position: absolute; */
     top: 6.5%;
-    left: 5%;
-    /* right: 2%; */
+    right: 3.5%;
+    cursor: pointer;
 }
 .wishDreamPage .back {
     /* margin-top: 10%;
@@ -244,6 +247,7 @@ body {
     bottom: -8%;
     width: 16.2%;
     height: 7%;
+    cursor: pointer;
 }
 .creativeMarketPage.show {
     background-image: url("../img/sectionPages/creativeMarket/background.png");
@@ -255,7 +259,7 @@ body {
     align-items: center;
     background-size: cover;
     background-position-x: center;
-    background-position-y: top;
+    background-position-y: bottom;
     background-repeat: no-repeat;
     overflow-y: scroll;
     width: 100%;
@@ -265,10 +269,11 @@ body {
     display: none;
 }
 .creativeMarketPage .goBack{
-    /* position: relative; */
-    position: absolute;
+    position: relative;
+    /* position: absolute; */
     top: 6.5%;
-    left: 5%;
+    right: 3.5%;
+    cursor: pointer;
 }
 .creativeMarketPage .back {
     /* margin-top: 10%;
@@ -306,7 +311,7 @@ body {
     align-items: center;
     background-size: cover;
     background-position-x: center;
-    background-position-y: top;
+    background-position-y: bottom;
     background-repeat: no-repeat;
     overflow-y: scroll;
     width: 100%;
@@ -316,10 +321,11 @@ body {
     display: none;
 }
 .timeStationPage .goBack{
-    /* position: relative; */
-    position: absolute;
+    position: relative;
+    /* position: absolute; */
     top: 6.5%;
-    left: 5%;
+    right: 3.5%;
+    cursor: pointer;
 }
 .timeStationPage .back {
     /* margin-top: 10%;
@@ -360,4 +366,5 @@ body {
     bottom: 0%;
     width: 16.5%;
     height: 6.1%;
+    cursor: pointer;
 }
