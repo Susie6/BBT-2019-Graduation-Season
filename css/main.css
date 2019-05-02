@@ -232,6 +232,7 @@ body {
 .wishDreamPage .contentBox{
     margin-left: 11.2%;
     margin-right: 34.35%;
+    margin-bottom: 10%;
 }
 .wishDreamPage .content {
     text-align: left;
@@ -243,14 +244,14 @@ body {
     width: 17%;
     height: 10.6%;
     right: -30.5%;
-    bottom: -8%;
 }
 .wishDreamPage .icon{
     position: relative;
     right: -34%;
-    bottom: -8%;
     width: 16.2%;
     height: 7%;
+    min-width: 58px;
+    min-height: 44.7px;
     cursor: pointer;
 }
 .creativeMarketPage.show {
@@ -351,6 +352,7 @@ body {
 .timeStationPage .contentBox{
     margin-left: 11.3%;
     margin-right: 11%;
+    margin-bottom: 10%;
 }
 .timeStationPage .content {
     text-align: left;
@@ -360,7 +362,7 @@ body {
 .timeStationPage .arrow{
     position: relative;
     width: 21.2%;
-    height: 10.5%;
+    height: 11%;
     right: -32.2%;
     bottom: 0.5%;
 }
