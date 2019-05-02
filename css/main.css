@@ -121,6 +121,8 @@ body {
     text-align: left;
     font-size: 0.875em;
     line-height: 1.8em;
+    font-family: SimHei ;
+    color: #333333;
 }
 .timeCapsulePage.show {
     background-image: url("../img/sectionPages/timeCapsule/background.png");
@@ -177,6 +179,8 @@ body {
     text-align: left;
     font-size: 0.875em;
     line-height: 1.8em;
+    font-family: SimHei ;
+    color: #333333;
 }
 
 .timeCapsulePage .arrow{
@@ -250,6 +254,8 @@ body {
     text-align: left;
     font-size: 0.875em;
     line-height: 1.8em;
+    font-family: SimHei ;
+    color: #333333;
 }
 .wishDreamPage .arrow{
     position: relative;
@@ -323,6 +329,8 @@ body {
     text-align: left;
     font-size: 0.875em;
     line-height: 1.8em;
+    font-family: SimHei ;
+    color: #333333;
 }
 .timeStationPage.show {
     background-image: url("../img/sectionPages/timeStation/background.png");
@@ -380,6 +388,8 @@ body {
     text-align: left;
     font-size: 0.875em;
     line-height: 1.8em;
+    font-family: SimHei ;
+    color: #333333;
 }
 .timeStationPage .arrow{
     position: relative;
