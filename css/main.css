@@ -37,7 +37,7 @@ body {
     display: none;
 }
 .mainPage .grad_title {
-    margin-top: 21%;
+    margin-top: 20%;
     margin-bottom: 12%;
     /* margin-top: 228px;
     margin-bottom: 108px; */
@@ -88,8 +88,10 @@ body {
 .photoWallPage .goBack{
     position: relative;
     /* position: absolute; */
-    top: 6.5%;
-    right: 3.5%;
+    /* top: 6.5%;
+    right: 3.5%; */
+    margin-top: 12%;
+    margin-right: 10%;
     cursor: pointer;
 }
 .photoWallPage .back {
@@ -104,7 +106,7 @@ body {
 }
 
 .photoWallPage .titleBox {
-    margin-top: 16.9%;
+    margin-top: 4.9%;
     margin-left: 23%;
     margin-bottom: 2%;
 }
@@ -142,8 +144,10 @@ body {
 .timeCapsulePage .goBack{
     position: relative;
     /* position: absolute; */
-    top: 6.5%;
-    right: 3.5%;
+    /* top: 6.5%;
+    right: 3.5%; */
+    margin-top: 12%;
+    margin-right: 10%;
     cursor: pointer;
 }
 .timeCapsulePage .back {
@@ -158,7 +162,7 @@ body {
 }
 
 .timeCapsulePage .titleBox {
-    margin-top: 16.9%;
+    margin-top: 4.9%;
     margin-left: 23%;
     margin-bottom: 0%;
 }
@@ -212,8 +216,10 @@ body {
 .wishDreamPage .goBack{
     position: relative;
     /* position: absolute; */
-    top: 6.5%;
-    right: 3.5%;
+    /* top: 6.5%;
+    right: 3.5%; */
+    margin-top: 12%;
+    margin-right: 10%;
     cursor: pointer;
 }
 .wishDreamPage .back {
@@ -228,7 +234,7 @@ body {
 }
 
 .wishDreamPage .titleBox {
-    margin-top: 17%;
+    margin-top: 4.9%;
     margin-left: 23%;
     margin-bottom: 0%;
 }
@@ -238,7 +244,7 @@ body {
 .wishDreamPage .contentBox{
     margin-left: 11.2%;
     margin-right: 34.35%;
-    margin-bottom: 10%;
+    margin-bottom: 3%;
 }
 .wishDreamPage .content {
     text-align: left;
@@ -284,8 +290,10 @@ body {
 .creativeMarketPage .goBack{
     position: relative;
     /* position: absolute; */
-    top: 6.5%;
-    right: 3.5%;
+    /* top: 6.5%;
+    right: 3.5%; */
+    margin-top: 12%;
+    margin-right: 10%;
     cursor: pointer;
 }
 .creativeMarketPage .back {
@@ -300,7 +308,7 @@ body {
 }
 
 .creativeMarketPage .titleBox {
-    margin-top: 25%;
+    margin-top: 4.9%;
     margin-left: 23%;
     margin-bottom: 2%;
 }
@@ -338,8 +346,10 @@ body {
 .timeStationPage .goBack{
     position: relative;
     /* position: absolute; */
-    top: 6.5%;
-    right: 3.5%;
+    /* top: 6.5%;
+    right: 3.5%; */
+    margin-top: 12%;
+    margin-right: 10%;
     cursor: pointer;
 }
 .timeStationPage .back {
@@ -354,7 +364,7 @@ body {
 }
 
 .timeStationPage .titleBox {
-    margin-top: 18.5%;
+    margin-top: 4.9%;
     margin-left: 23%;
     margin-bottom: 0%;
 }
