@@ -63,7 +63,11 @@ body {
     width: 60%;
     margin-bottom: 3%
 }
-
+.mainPage .activity_last{
+    height: 15%;
+    width: 60%;
+    margin-bottom: 10%;
+}
 .photoWallPage.show {
     background-image: url("../img/sectionPages/photoWall/background.png");
     display: flex;
