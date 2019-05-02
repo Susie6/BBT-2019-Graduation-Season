@@ -177,8 +177,9 @@ body {
 .timeCapsulePage .contentBox{
     margin-left: 10.3%;
     margin-right: 26.7%;
+    margin-bottom: 7%;
     width: 62.2%;
-    height: 55.25%;
+    height: 50%;
     overflow: scroll;
 }
 .timeCapsulePage .content {
@@ -191,14 +192,14 @@ body {
 
 .timeCapsulePage .arrow{
     position: relative;
-    width: 23%;
-    height: 12%;
-    right: -34%;
-    bottom: 2.5%;
+    width: 21.2%;
+    height: 11%;
+    right: -31%;
+    bottom: 1.8%;
 }
 .timeCapsulePage .icon{
     position: relative;
-    right: -37%;
+    right: -33%;
     bottom: 5%;
     width: 14.2%;
     height: 9.4%;
@@ -254,7 +255,7 @@ body {
 .wishDreamPage .contentBox{
     margin-left: 11.2%;
     margin-right: 34.35%;
-    margin-bottom: 3%;
+    margin-bottom: 15%;
 }
 .wishDreamPage .content {
     text-align: left;
@@ -267,13 +268,13 @@ body {
     position: relative;
     width: 17%;
     height: 10.6%;
-    right: -30.5%;
+    right: -27%;
     min-width: 64.7px;
     min-height: 67.3px;
 }
 .wishDreamPage .icon{
     position: relative;
-    right: -34%;
+    right: -31.3%;
     width: 16.2%;
     height: 7%;
     min-width: 58px;
@@ -391,7 +392,7 @@ body {
     overflow: scroll;
     margin-left: 11.3%;
     margin-right: 11%;
-    margin-bottom: 3%;
+    margin-bottom: 8%;
 }
 .timeStationPage .content {
     text-align: left;
@@ -406,12 +407,12 @@ body {
     height: 11%;
     min-width: 76.3px;
     min-height: 67.3px;
-    right: -32.2%;
+    right: -28.3%;
     bottom: 0.5%;
 }
 .timeStationPage .icon{
     position: relative;
-    right: -36.1%;
+    right: -31.3%;
     bottom: 0%;
     width: 16.5%;
     height: 6.1%;
