@@ -40,6 +40,9 @@ wishDream_back.addEventListener("click", hideWishDream);
 
 btn.addEventListener("click", show);
 
+function startingAnimation(){
+
+}
 function show(event) {
     var click = event.target.id;
     var show_this = document.getElementById(click + "Page");
