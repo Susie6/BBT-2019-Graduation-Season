@@ -40,10 +40,23 @@ wishDream_back.addEventListener("click", hideWishDream);
 
 btn.addEventListener("click", show);
 
-var toMainPage = document.getElementById("toMainPage");
-toMainPage.addEventListener("click",mainPage);
+function startingAnimation() {
+    //var toMainPage = document.getElementById("toMainPage");
+    var red = document.getElementById("red_light");
+    var green = document.getElementById("green_light");
+    green.style.display = "none";
+    setTimeout(function () {
+        red.style.display = "none";
+        green.style.display = "block";
+        toMainPage.style.display = "block";
+    }, 2000);
+    //toMainPage.addEventListener("click",mainPage);
+}
 
-function mainPage(){
+var toMainPage = document.getElementById("toMainPage");
+toMainPage.addEventListener("click", mainPage);
+
+function mainPage() {
     startingPage.classList.add("fadeOut");
     mainPage.classList.remove("hide");
     mainPage.classList.add("show");
@@ -56,21 +69,11 @@ function mainPage(){
     console("页面切换");
 }
 
-function startingAnimation(){
-    var red = document.getElementById("red_light");
-    var green = document.getElementById("green_light");
-    green.style.display = "none";
-    setTimeout(function () {
-        red.style.display = "none";
-        green.style.display = "block";
-        toMainPage.style.display = "block";
-    }, 2000);
-}
 function show(event) {
     var click = event.target.id;
     var show_this = document.getElementById(click + "Page");
     console.log(show_this);
-    if(mainPage.classList.contains("fadeFromRight")){
+    if (mainPage.classList.contains("fadeFromRight")) {
         mainPage.classList.remove("fadeFromRight");
     }
     mainPage.classList.remove("show");
@@ -114,13 +117,7 @@ function hideWishDream() {
     wishDream.classList.remove("show");
     wishDream.classList.add("hide");
 }
-var mainCount, timeCapsuleCount, timeStationCount, wishDreamCount;
-// var name = {
-//     "zongxuan": mainCount,
-//     "sgjn": timeCapsuleCount,
-//     "lncz": timeStationCount,
-//     "xybkm": wishDreamCount,
-// }
+
 window.onload = function count() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -142,7 +139,7 @@ window.onload = function count() {
     startingAnimation();
 }
 
-function goTimeStation(){
+function goTimeStation() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
@@ -157,7 +154,7 @@ function goTimeStation(){
     // window.location.href =
 }
 
-function goTimeCapsule(){
+function goTimeCapsule() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
@@ -172,7 +169,7 @@ function goTimeCapsule(){
     // window.location.href =
 }
 
-function goWishDream(){
+function goWishDream() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
