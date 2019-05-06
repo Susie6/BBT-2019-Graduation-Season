@@ -54,9 +54,10 @@ function startingAnimation() {
 }
 
 var toMainPage = document.getElementById("toMainPage");
-toMainPage.addEventListener("click", mainPage);
+toMainPage.addEventListener("click", main_page);
+console.info(main_page)
 
-function mainPage() {
+function main_page() {
     startingPage.classList.add("fadeOut");
     mainPage.classList.remove("hide");
     mainPage.classList.add("show");
@@ -66,7 +67,7 @@ function mainPage() {
         startingPage.classList.remove("fadeOut");
         mainPage.classList.remove("fadeFromRight");
     }, 2000);
-    console("页面切换");
+    console.log("页面切换");
 }
 
 function show(event) {
