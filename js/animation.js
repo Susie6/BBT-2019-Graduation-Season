@@ -41,7 +41,13 @@ wishDream_back.addEventListener("click", hideWishDream);
 btn.addEventListener("click", show);
 
 function startingAnimation(){
-
+    // var red = document.getElementById("red_light");
+    // var green = document.getElementById("green_light");
+    // setTimeout(function () {
+    //     red.classList.add("hide");
+    //     green.classList.remove("hide");
+    //     green.classList.add("hide");
+    // }, 2000);
 }
 function show(event) {
     var click = event.target.id;
