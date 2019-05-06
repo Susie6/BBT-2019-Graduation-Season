@@ -44,6 +44,12 @@ function startingAnimation() {
     //var toMainPage = document.getElementById("toMainPage");
     var red = document.getElementById("red_light");
     var green = document.getElementById("green_light");
+    var person = document.getElementById("person");
+    setTimeout(function () {
+        red.style.display = "none";
+        green.style.display = "block";
+        toMainPage.style.display = "block";
+    }, 2000);
     green.style.display = "none";
     setTimeout(function () {
         red.style.display = "none";
@@ -55,7 +61,6 @@ function startingAnimation() {
 
 var toMainPage = document.getElementById("toMainPage");
 toMainPage.addEventListener("click", main_page);
-console.info(main_page)
 
 function main_page() {
     startingPage.classList.add("fadeOut");
