@@ -40,19 +40,39 @@ wishDream_back.addEventListener("click", hideWishDream);
 
 btn.addEventListener("click", show);
 
+var toMainPage = document.getElementById("toMainPage");
+toMainPage.addEventListener("click",mainPage);
+
+function mainPage(){
+    startingPage.classList.add("fadeOut");
+    mainPage.classList.remove("hide");
+    mainPage.classList.add("show");
+    mainPage.classList.add("fadeFromRight");
+    setTimeout(function () {
+        startingPage.classList.add("hide");
+        startingPage.classList.remove("fadeOut");
+        mainPage.classList.remove("fadeFromRight");
+    }, 2000);
+    console("页面切换");
+}
+
 function startingAnimation(){
-    // var red = document.getElementById("red_light");
-    // var green = document.getElementById("green_light");
-    // setTimeout(function () {
-    //     red.classList.add("hide");
-    //     green.classList.remove("hide");
-    //     green.classList.add("hide");
-    // }, 2000);
+    var red = document.getElementById("red_light");
+    var green = document.getElementById("green_light");
+    green.style.display = "none";
+    setTimeout(function () {
+        red.style.display = "none";
+        green.style.display = "block";
+        toMainPage.style.display = "block";
+    }, 2000);
 }
 function show(event) {
     var click = event.target.id;
     var show_this = document.getElementById(click + "Page");
     console.log(show_this);
+    if(mainPage.classList.contains("fadeFromRight")){
+        mainPage.classList.remove("fadeFromRight");
+    }
     mainPage.classList.remove("show");
     mainPage.classList.add("hide");
     show_this.classList.remove("hide");
@@ -119,6 +139,7 @@ window.onload = function count() {
     var name = "zongxuan";
     JSON.stringify(name);
     xhttp.send("name=" + name);
+    startingAnimation();
 }
 
 function goTimeStation(){

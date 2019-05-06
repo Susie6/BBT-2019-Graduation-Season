@@ -7,7 +7,7 @@ body {
     /* overflow-y: scroll; */
 }
 
-.startingPage.show {
+.startingPage {
     position: fixed;
     height: 100%;
     width: 100%;
@@ -24,7 +24,11 @@ body {
     /* display: flex;
     flex-direction: column; */
 }
-
+.startingPage.fadeOut{
+    -webkit-animation: fadeOut ease 0.7s 0s 1 forwards;
+    -moz-animation: fadeOut ease 0.7s 0s 1 forwards;
+    animation: fadeOut ease 0.7s 0s 1 forwards;
+}
 .startingPage.hide {
     display: none;
 }
@@ -45,21 +49,42 @@ body {
     justify-content: center;
     align-items: flex-end;
 } */
-
-.startingPage .main_arrow{
-    width: 6%;
+.startingPage .toMainPage{
+    display: none;
+    width: 14%;
     height: 10%;
     position: absolute;
-    right: 8%;
-    top: 63%;
+    right: 0;
+    top: 62%;
+    cursor: pointer;
 }
+.startingPage .main_arrow {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+}
+
+#arrow2 {
+    animation: arrow ease 1s 0s infinite both;
+}
+
+#arrow3 {
+    animation: arrow ease 1s 0.2s infinite both;
+}
+
+#arrow4 {
+    animation: arrow ease 1s 0.4s infinite both;
+}
+
 @keyframes arrow {
     to {
-        transform: translateX(100%);
+        transform: translateX(150%);
         opacity: 0;
     }
 }
-.startingPage .dot{
+
+.startingPage .dot {
     width: 100%;
     height: auto;
     left: 0;
@@ -67,18 +92,18 @@ body {
     position: absolute;
     bottom: 10.5%;
 }
-.light.show {
+
+#green_light,
+#red_light {
     position: absolute;
     right: 20%;
     bottom: 9%;
     width: 20%;
-    height: 30%; 
-} 
-.light.hide{
-    display: none;
+    height: 30%;
 }
+
 /* .startingPage .animation{
-    animation: walking ease 5s 0s 1 forwards;
+    animation: walking ease 2s 0s 1 forwards;
 } */
 
 .startingPage .person {
@@ -95,8 +120,8 @@ body {
     background-repeat: no-repeat;
     background-size: 2000%;
     /* background-position: 0 0; */
-    animation: walk steps(1) 2s 0s infinite;
-    animation-fill-mode: both;
+    animation: walk steps(1) 2s 0s 1;
+    animation-fill-mode: forwards;
 }
 
 @keyframes walk {
@@ -131,30 +156,38 @@ body {
     70% {
         background-position: -740px 0px;
     }
-    80%{
+
+    80% {
         background-position: -840px 0px;
     }
-    90%{
+
+    90% {
         background-position: -960px 0px;
     }
-    92.5%{
+
+    92.5% {
         background-position: -1070px 0px;
     }
-    95%{
+
+    95% {
         background-position: -1178px 0px;
     }
-    97.5%{
+
+    97.5% {
         background-position: -1274px 0px;
     }
-    100%{
+
+    100% {
         background-position: -1400px 0px;
     }
 }
-@keyframes walking{
-    to{
+
+@keyframes walking {
+    to {
         transform: translateX(50%);
     }
 }
+
 .startingPage.easeFadeOut {
     animation: easeFadeOut ease 0.5s 0s 1;
     animation-fill-mode: forwards;
@@ -192,7 +225,12 @@ body {
     display: flex;
     flex-direction: column;
 }
-
+.mainPage.fadeFromRight{
+    -webkit-animation: fadeFromRight ease 0.7s 0s 1 forwards;
+    -moz-animation: fadeFromRight ease 0.7s 0s 1 forwards;
+    animation: fadeFromRight ease 0.7s 0s 1 forwards;
+    animation-fill-mode: forwards;
+}
 .mainPage.hide {
     display: none;
 }
@@ -639,13 +677,6 @@ body {
     margin-bottom: 11%;
 }
 
-.fadeOut {
-    -webkit-animation: fadeOut 0.7s ease both;
-    -moz-animation: fadeOut 0.7s ease both;
-    animation: fadeOut 0.7s ease both;
-    animation-fill-mode: both;
-}
-
 @-webkit-keyframes fadeOut {
     to {
         opacity: 0;
@@ -664,17 +695,10 @@ body {
     }
 }
 
-.fadeFromLeft {
-    -webkit-animation: fadeFromLeft 0.7s ease both;
-    -moz-animation: fadeFromLeft 0.7s ease both;
-    animation: fadeFromLeft 0.7s ease both;
-    animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes fadeFromLeft {
+@-webkit-keyframes fadeFromRight {
     from {
         opacity: 0.3;
-        -webkit-transform: translateX(-100%);
+        -webkit-transform: translateX(100%);
     }
 
     to {
@@ -683,10 +707,10 @@ body {
     }
 }
 
-@-moz-keyframes fadeFromLeft {
+@-moz-keyframes fadeFromRight {
     from {
         opacity: 0.3;
-        -moz-transform: translateX(-100%);
+        -moz-transform: translateX(100%);
     }
 
     to {
@@ -695,10 +719,10 @@ body {
     }
 }
 
-@keyframes fadeFromLeft {
+@keyframes fadeFromRight {
     from {
         opacity: 0.3;
-        transform: translateX(-100%);
+        transform: translateX(100%);
     }
 
     to {
