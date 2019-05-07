@@ -93,17 +93,12 @@ body {
     height: 30%;
 }
 
-.startingPage .stickMan {
-    /* margin-top: 10%;
-    margin-left: 30%;
-    margin-bottom: 0%; */
+.startingPage .person {
     position: absolute;
     left: 5%;
     bottom: 10.5%;
     width: 16%;
     height: 16.3%;
-    min-height: 104px;
-    min-width: 72px;
     /* overflow: hidden; */
     /* background-image: url(../img/startingPage/stickMan.png);
     background-repeat: no-repeat;
@@ -112,12 +107,13 @@ body {
     animation-fill-mode: forwards; */
     animation: walking linear 2s 0s 1 forwards;
 }
-/* #stickMan{
+#stickMan{
     height: 100%;
-    width: 80%;
-    min-height: 100px;
-    min-width: 50px;
-} */
+    width: 100%;
+    min-height: 104px;
+    min-width: 72px;
+    bottom: 0;
+}
 
 @keyframes walking {
     from{
