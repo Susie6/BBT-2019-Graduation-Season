@@ -46,33 +46,34 @@ image[2] = "./img/startingPage/p3.svg";
 image[3] = "./img/startingPage/p4.svg";
 image[4] = "./img/startingPage/p5.svg";
 image[5] = "./img/startingPage/p6.svg";
-image[6] = "./img/startingPage/p1.svg";
-image[7] = "./img/startingPage/p2.svg";
-image[8] = "./img/startingPage/p3.svg";
-image[9] = "./img/startingPage/p7.svg";
-image[10] = "./img/startingPage/p8.svg";
+image[6] = "./img/startingPage/p7.svg";
+image[7] = "./img/startingPage/p8.svg";
+image[8] = "./img/startingPage/p9.svg";
+image[9] = "./img/startingPage/p10.svg";
+image[10] = "./img/startingPage/hat1.svg";
+image[11] = "./img/startingPage/hat2.svg";
+image[12] = "./img/startingPage/hat3.svg";
+image[13] = "./img/startingPage/hat4.svg";
+image[14] = "./img/startingPage/hat5.svg";
 
 function startingAnimation() {
 
-    var red = document.getElementById("red_light");
-    var green = document.getElementById("green_light");
+    var light = document.getElementById("light");
     var stickMan = document.getElementById("stickMan");
 
     for (var i = 0; i<image.length; i++) { 
         setTimeout( (function(i) {
             return function() {
-                stickMan.setAttribute('src',image[i]);
+                stickMan.setAttribute("src",image[i]);
                 console.log("第" + i + "个火柴人啦~");
             }
-        })(i), i*182 );
+        })(i), i*200 );
     }
 
     setTimeout(function () {
-        red.style.display = "none";
-        green.style.display = "block";
+        light.setAttribute("src","./img/startingPage/greenlight.svg");
         toMainPage.style.display = "block";
     }, 2000);
-    green.style.display = "none";
 
 }
 
