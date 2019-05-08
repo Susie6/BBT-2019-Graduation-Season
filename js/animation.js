@@ -60,15 +60,14 @@ function startingAnimation() {
         setTimeout((function (i) {
             return function () {
                 stickMan.setAttribute("src", image[i]);
-                console.log("第" + i + "个火柴人啦~");
             }
-        })(i), i * 150);
+        })(i), i * 100);
     }
-    stickMan.style.animation = "walking linear 1.5s 0s 1 forwards";
+    stickMan.style.animation = "walking linear 1s 0s 1 forwards";
     setTimeout(function () {
         light.setAttribute("src", "./img/startingPage/greenlight.svg");
         toMainPage.style.display = "block";
-    }, 1500);
+    }, 1000);
 
 }
 
@@ -90,15 +89,40 @@ function main_page() {
 
 function show(event) {
     var click = event.target.id;
+
+    // var ripple = document.getElementsByClassName("ripple");
+    // for (i = 0; i < ripple.length; i++) {
+    //     if (ripple[i] != null) {
+    //         ripple[i].parentNode.removeChild(ripple[i]);
+    //     }
+    // }
+
+    // var a = document.getElementById(click);
+    // var button_left = a.offsetLeft; 
+    // var button_top = a.offsetTop; 
+    // var button_width = a.offsetWidth; 
+    // var button_height = a.offsetHeight; 
+    // var ripple_width = button_width / 2;
+    // console.log(event.clientX);
+    // var ripple_x = event.clientX - button_left - ripple_width / 2;
+    // var ripple_y = event.clientY - button_top - ripple_width / 2;
+    // var act = document.getElementById("activities");
+    // act.appendChild("<div class='ripple' id='ripple'></div>");
+    // var ripple = document.getElementById("ripple");
+    // ripple.classList.add("rippleEffect");
+
+
     var show_this = document.getElementById(click + "Page");
-    console.log(show_this);
     if (mainPage.classList.contains("fadeFromRight")) {
         mainPage.classList.remove("fadeFromRight");
     }
-    // mainPage.classList.remove("show");
-    mainPage.classList.add("hide");
-    show_this.classList.remove("hide");
-    // show_this.classList.add("show");
+    
+    setTimeout(function () {
+        mainPage.classList.add("hide");
+        show_this.classList.remove("hide");
+    }, 700);
+
+
 }
 
 function hidePhotoWall() {
