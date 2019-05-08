@@ -202,13 +202,25 @@ body {
 .mainPage .activity {
     height: 15%;
     width: 60%;
-    margin-bottom: 3%
+    margin-bottom: 3%;
+    min-width: 216px;
+    min-height: 56px;
+}
+
+.mainPage .activity:hover {
+    opacity: 0.8;
 }
 
 .mainPage .activity_last {
     height: 15%;
     width: 60%;
     margin-bottom: 10%;
+    min-width: 216px;
+    min-height: 56px;
+}
+
+.mainPage .activity_last:hover {
+    opacity: 0.8;
 }
 
 .photoWallPage {
@@ -279,10 +291,7 @@ body {
 
 .timeCapsulePage {
     background-image: url("../img/sectionPages/timeCapsule/background.png");
-    background-size: 100% auto;
-    background-position: top;
-    background-repeat: no-repeat;
-    /* display: flex; */
+    display: flex;
     flex-direction: column;
     align-items: center;
     background-size: cover;
