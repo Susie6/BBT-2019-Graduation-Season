@@ -1,15 +1,9 @@
+
 var startingPage = document.getElementById("startingPage");
 var mainPage = document.getElementById("mainPage");
 
 var btn = document.getElementById("activities");
-//导航栏
-var activities = {
-    timeCapsule: document.getElementById("timeCapsule"),
-    wishDream: document.getElementById("wishDream"),
-    photoWall: document.getElementById("photoWall"),
-    creativeMarket: document.getElementById("creativeMarket"),
-    timeStation: document.getElementById("timeStation"),
-};
+
 //活动分页面
 var timeCapsule = document.getElementById("timeCapsulePage");
 var wishDream = document.getElementById("wishDreamPage");
@@ -38,6 +32,7 @@ timeCapsule_back.addEventListener("click", hideTimeCapsule);
 timeStation_back.addEventListener("click", hideTimeStation);
 wishDream_back.addEventListener("click", hideWishDream);
 
+
 btn.addEventListener("click", show);
 var image = new Array();
 image[0] = "./img/startingPage/p1.svg";
@@ -61,19 +56,19 @@ function startingAnimation() {
     var light = document.getElementById("light");
     var stickMan = document.getElementById("stickMan");
 
-    for (var i = 0; i<image.length; i++) { 
-        setTimeout( (function(i) {
-            return function() {
-                stickMan.setAttribute("src",image[i]);
+    for (var i = 0; i < image.length; i++) {
+        setTimeout((function (i) {
+            return function () {
+                stickMan.setAttribute("src", image[i]);
                 console.log("第" + i + "个火柴人啦~");
             }
-        })(i), i*200 );
+        })(i), i * 150);
     }
-
+    stickMan.style.animation = "walking linear 1.5s 0s 1 forwards";
     setTimeout(function () {
-        light.setAttribute("src","./img/startingPage/greenlight.svg");
+        light.setAttribute("src", "./img/startingPage/greenlight.svg");
         toMainPage.style.display = "block";
-    }, 2000);
+    }, 1500);
 
 }
 
@@ -83,13 +78,13 @@ toMainPage.addEventListener("click", main_page);
 function main_page() {
     startingPage.classList.add("fadeOut");
     mainPage.classList.remove("hide");
-    mainPage.classList.add("show");
+    // mainPage.classList.add("show");
     mainPage.classList.add("fadeFromRight");
     setTimeout(function () {
         startingPage.classList.add("hide");
         startingPage.classList.remove("fadeOut");
         mainPage.classList.remove("fadeFromRight");
-    }, 2000);
+    }, 700);
     console.log("页面切换");
 }
 
@@ -100,45 +95,44 @@ function show(event) {
     if (mainPage.classList.contains("fadeFromRight")) {
         mainPage.classList.remove("fadeFromRight");
     }
-    mainPage.classList.remove("show");
+    // mainPage.classList.remove("show");
     mainPage.classList.add("hide");
     show_this.classList.remove("hide");
-    //show_this.classList.add("fadeFromTop");
-    show_this.classList.add("show");
+    // show_this.classList.add("show");
 }
 
 function hidePhotoWall() {
     mainPage.classList.remove("hide");
-    mainPage.classList.add("show");
-    photoWall.classList.remove("show");
+    // mainPage.classList.add("show");
+    // photoWall.classList.remove("show");
     photoWall.classList.add("hide");
 }
 
 function hideCreateMarket() {
     mainPage.classList.remove("hide");
-    mainPage.classList.add("show");
-    creativeMarket.classList.remove("show");
+    // mainPage.classList.add("show");
+    // creativeMarket.classList.remove("show");
     creativeMarket.classList.add("hide");
 }
 
 function hideTimeCapsule() {
     mainPage.classList.remove("hide");
-    mainPage.classList.add("show");
-    timeCapsule.classList.remove("show");
+    // mainPage.classList.add("show");
+    // timeCapsule.classList.remove("show");
     timeCapsule.classList.add("hide");
 }
 
 function hideTimeStation() {
     mainPage.classList.remove("hide");
-    mainPage.classList.add("show");
-    timeStation.classList.remove("show");
+    // mainPage.classList.add("show");
+    // timeStation.classList.remove("show");
     timeStation.classList.add("hide");
 }
 
 function hideWishDream() {
     mainPage.classList.remove("hide");
-    mainPage.classList.add("show");
-    wishDream.classList.remove("show");
+    // mainPage.classList.add("show");
+    // wishDream.classList.remove("show");
     wishDream.classList.add("hide");
 }
 

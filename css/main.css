@@ -24,11 +24,13 @@ body {
     /* display: flex;
     flex-direction: column; */
 }
-.startingPage.fadeOut{
+
+.startingPage.fadeOut {
     -webkit-animation: fadeOut linear 0.7s 0s 1 forwards;
     -moz-animation: fadeOut linear 0.7s 0s 1 forwards;
     animation: fadeOut linear 0.7s 0s 1 forwards;
 }
+
 .startingPage.hide {
     display: none;
 }
@@ -40,7 +42,7 @@ body {
     position: absolute;
 }
 
-.startingPage .toMainPage{
+.startingPage .toMainPage {
     display: none;
     width: 14%;
     height: 10%;
@@ -49,6 +51,7 @@ body {
     top: 62%;
     cursor: pointer;
 }
+
 .startingPage .main_arrow {
     width: 50%;
     height: 100%;
@@ -105,20 +108,22 @@ body {
     background-size: 2000%;
     animation: walk steps(1) 2s 0s 1;
     animation-fill-mode: forwards; */
-    animation: walking linear 2s 0s 1 forwards;
+    /* animation: walking linear 2s 0s 1 forwards; */
 }
-#stickMan{
+
+#stickMan {
     height: 100%;
     width: 100%;
     min-height: 104px;
     min-width: 72px;
-    bottom: 0;
+    /* bottom: 0; */
 }
 
 @keyframes walking {
-    from{
+    from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(150%);
     }
@@ -143,7 +148,7 @@ body {
     display: none;
 }
 
-.mainPage.show {
+.mainPage {
     position: fixed;
     height: 100%;
     width: 100%;
@@ -160,12 +165,14 @@ body {
     display: flex;
     flex-direction: column;
 }
-.mainPage.fadeFromRight{
+
+.mainPage.fadeFromRight {
     -webkit-animation: fadeFromRight ease 0.7s 0s 1 forwards;
     -moz-animation: fadeFromRight ease 0.7s 0s 1 forwards;
     animation: fadeFromRight ease 0.7s 0s 1 forwards;
     animation-fill-mode: forwards;
 }
+
 .mainPage.hide {
     display: none;
 }
@@ -204,7 +211,7 @@ body {
     margin-bottom: 10%;
 }
 
-.photoWallPage.show {
+.photoWallPage {
     background-image: url("../img/sectionPages/photoWall/background.png");
     display: flex;
     flex-direction: column;
@@ -270,7 +277,7 @@ body {
     color: #333333;
 }
 
-.timeCapsulePage.show {
+.timeCapsulePage {
     background-image: url("../img/sectionPages/timeCapsule/background.png");
     background-size: 100% auto;
     background-position: top;
@@ -360,7 +367,7 @@ body {
     margin-bottom: 11%;
 }
 
-.wishDreamPage.show {
+.wishDreamPage {
     background-image: url("../img/sectionPages/wishDream/background.png");
     background-size: 100% auto;
     background-position: top;
@@ -453,7 +460,7 @@ body {
     margin-bottom: 11%;
 }
 
-.creativeMarketPage.show {
+.creativeMarketPage {
     background-image: url("../img/sectionPages/creativeMarket/background.png");
     background-size: 100% auto;
     background-position: top;
@@ -518,7 +525,7 @@ body {
     color: #333333;
 }
 
-.timeStationPage.show {
+.timeStationPage {
     background-image: url("../img/sectionPages/timeStation/background.png");
     background-size: 100% auto;
     background-position: top;
@@ -665,6 +672,7 @@ body {
         transform: translateX(0);
     }
 }
+
 @keyframes walk {
     0% {
         background-position: 0px 0px;
