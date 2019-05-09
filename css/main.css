@@ -90,7 +90,7 @@ body {
     height: 60%; */
     width: 15px;
     height: 15px;
-    animation: rotate 2s linear infinite;
+    animation: rotate 0.5s linear infinite;
 }
 
 @keyframes rotate {
@@ -146,9 +146,9 @@ body {
     display: none;
 }
 .loadingPage.fadeOut{
-    -webkit-animation: fadeOut linear 1s 0s 1 forwards;
-    -moz-animation: fadeOut linear 1s 0s 1 forwards;
-    animation: fadeOut linear 1s 0s 1 forwards;
+    -webkit-animation: fadeOut linear 0.7s 0s 1 forwards;
+    -moz-animation: fadeOut linear 0.7s 0s 1 forwards;
+    animation: fadeOut linear 0.7s 0s 1 forwards;
 }
 .startingPage {
     position: fixed;
@@ -168,9 +168,9 @@ body {
     flex-direction: column; */
 }
 .startingPage.fadeIn{
-    -webkit-animation: fadeIn linear 1s 0s 1 forwards;
-    -moz-animation: fadeIn linear 1s 0s 1 forwards;
-    animation: fadeIn linear 1s 0s 1 forwards;
+    -webkit-animation: fadeIn linear 0.7s 0s 1 forwards;
+    -moz-animation: fadeIn linear 0.7s 0s 1 forwards;
+    animation: fadeIn linear 0.7s 0s 1 forwards;
 }
 .startingPage.fadeOut {
     -webkit-animation: fadeOut linear 0.7s 0s 1 forwards;

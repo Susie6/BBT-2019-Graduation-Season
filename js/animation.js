@@ -3,8 +3,18 @@ var startingPage = document.getElementById("startingPage");
 var mainPage = document.getElementById("mainPage");
 
 //进入分页面
-var btn = document.getElementById("activities");
-btn.addEventListener("click", show);
+// var btn = document.getElementById("activities");
+// btn.addEventListener("click", show);
+var timeCapsule_btn = document.getElementById("timeCapsule");
+var wishDream_btn = document.getElementById("wishDream");
+var photoWall_btn = document.getElementById("photoWall");
+var creativeMarket_btn = document.getElementById("creativeMarket");
+var timeStation_btn = document.getElementById("timeStation");
+timeCapsule_btn.addEventListener("click", show);
+wishDream_btn.addEventListener("click", show);
+photoWall_btn.addEventListener("click", show);
+creativeMarket_btn.addEventListener("click", show);
+timeStation_btn.addEventListener("click", show);
 
 //活动分页面
 var timeCapsule = document.getElementById("timeCapsulePage");

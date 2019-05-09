@@ -43,7 +43,7 @@ function loadingAnimation() {
         startingPage.classList.add("fadeIn");    
     setTimeout(function () {
         loadingPage.classList.add("hide");
-    }, 3000);    
+    }, 700);    
     }
     // setTimeout(function () {
     //     loadingPage.classList.add("fadeOut");
