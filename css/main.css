@@ -6,7 +6,8 @@ body {
     margin: 0%;
     /* overflow-y: scroll; */
 }
-.loadingPage{
+
+.loadingPage {
     position: fixed;
     height: 100%;
     width: 100%;
@@ -21,30 +22,133 @@ body {
     background-repeat: no-repeat;
     overflow: hidden;
 }
-.loadingPage.bike{
-    position: fixed;
-    bottom: 58.7%;
-    width: 15.6%;
-    height: 5.8%;
-}
-.loadingPage.wheel{
-    position: fixed;
-    bottom: 58.7%;
-}
-.loadingPage.box{
-    position: fixed;
-    bottom: 56.35%;
+
+.loadingPage .whole {
+    height: 8%;
     width: 72.2%;
-    height: 2.1875%;
-}
-.loadingPage.line{
     position: fixed;
-    bottom: 56.5%;
-    height: 1.6%;
-    widows: 71%;
+    bottom: 56.4%;
+    left: 13.9%;
 }
-.loadingPage.hide{
+
+.loadingPage .bicycle {
+    position: absolute;
+    bottom: 35%;
+    left: 0%;
+    /* width: 30%;
+    height: 80%; */
+    width: 56px;
+    height: 37px;
+    -webkit-animation: riding linear 0.1s 0s 1 forwards;
+    -moz-animation: riding linear 0.1s 0s 1 forwards;
+    animation: riding linear 0.1s 0s 1 forwards;
+}
+@-webkit-keyframes riding {
+    to {
+        transform: translateX(370%);
+    }
+}
+
+@-moz-keyframes riding {
+    to {
+        transform: translateX(370%);
+    }
+}
+
+@keyframes riding {
+    to {
+        transform: translateX(370%);
+    }
+}
+.loadingPage .bike {
+    position: absolute;
+    bottom: 5%;
+    left: 0%;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+}
+
+.loadingPage .wheel {
+    position: absolute;
+    bottom: 14.6%;
+    left: 7.1%;
+    z-index: 3;
+    /* width: 35%;
+    height: 60%; */
+    width: 15px;
+    height: 15px;
+    animation: rotate 0.5s linear infinite;
+}
+
+.loadingPage .wheel2 {
+    position: absolute;
+    bottom: 14.6%;
+    left: 65.7%;
+    z-index: 3;
+    /* width: 35%;
+    height: 60%; */
+    width: 15px;
+    height: 15px;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loadingPage .stripesLoader {
+    height: 2%;
+    width: 72.2%;
+    position: fixed;
+    bottom: 56.4%;
+    /* bottom: 56.4%;
+    left: 13.9%; */
+    /* background: linear-gradient(90deg, #eee 50%, transparent 50%); */
+    background-color: rgba(0, 0, 0, 0);
+    /* background-size: 200%;*/
+    background-position: -10% center;
+    border-radius: 5px;
+    transform: scale(-1);
+    transition: 0.3s;
+}
+
+.loadingPage .stripesLoader:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(-45deg,
+            transparent 25%,
+            rgba(106, 109, 116, 1) 25%,
+            rgba(106, 109, 116, 1) 30%,
+            transparent 30%,
+            transparent 35%,
+            rgba(106, 109, 116, 1) 35%,
+            rgba(106, 109, 116, 1) 70%,
+            transparent 70%);
+    animation: shift 2s linear infinite;
+    background-size: 60px 100%;
+    box-shadow: inset 0 0px 1px rgba(0, 0, 0, 0.2),
+        inset 0 -2px 1px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes shift {
+    to {
+        background-position: -60px 100%;
+    }
+}
+
+.loadingPage.hide {
     display: none;
+}
+.loadingPage.fadeOut{
+    -webkit-animation: fadeOut linear 1s 0s 1 forwards;
+    -moz-animation: fadeOut linear 1s 0s 1 forwards;
+    animation: fadeOut linear 1s 0s 1 forwards;
 }
 .startingPage {
     position: fixed;
@@ -52,7 +156,7 @@ body {
     width: 100%;
     margin: 0;
     z-index: 1;
-    background-image: url("../img/startingPage/background.png");
+    background-image: url("../img/startingPage/background.jpg");
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -63,7 +167,11 @@ body {
     /* display: flex;
     flex-direction: column; */
 }
-
+.startingPage.fadeIn{
+    -webkit-animation: fadeIn linear 1s 0s 1 forwards;
+    -moz-animation: fadeIn linear 1s 0s 1 forwards;
+    animation: fadeIn linear 1s 0s 1 forwards;
+}
 .startingPage.fadeOut {
     -webkit-animation: fadeOut linear 0.7s 0s 1 forwards;
     -moz-animation: fadeOut linear 0.7s 0s 1 forwards;
@@ -77,6 +185,7 @@ body {
 .startingPage .graduation {
     margin-top: 38%;
     height: 19.5%;
+    min-height: 115.75px;
     width: 100%;
     position: absolute;
 }
@@ -132,9 +241,9 @@ body {
     right: 20%;
     bottom: 10%;
     width: 20%;
-    height: 30%;
+    height: 27%;
     min-width: 72px;
-    max-height: 178px;
+    min-height: 172.8px;
 }
 
 .startingPage .person {
@@ -187,7 +296,7 @@ body {
     width: 100%;
     margin: 0;
     z-index: 1;
-    background-image: url("../img/mainPage/background.png");
+    background-image: url("../img/mainPage/background.jpg");
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -235,7 +344,7 @@ body {
     width: 60%;
     margin-bottom: 3%;
     min-width: 216px;
-    min-height: 56px;
+    min-height: 58px;
 }
 
 .mainPage .activity_last {
@@ -243,41 +352,44 @@ body {
     width: 60%;
     margin-bottom: 10%;
     min-width: 216px;
-    min-height: 56px;
+    min-height: 58px;
 }
 
 .ripple {
     position: absolute;
     border-radius: 50% 50%;
     background: rgba(255, 255, 255, 0.4);
-    transform: scale(0); 
+    transform: scale(0);
     -webkit-transform: scale(0);
-    opacity: 1; 
-  }
-  .ripple.rippleEffect {
+    opacity: 1;
+}
+
+.ripple.rippleEffect {
     /* 执行时长0.6s、效果为渐变(linear)、名称为rippleDrop的动画 */
-    -webkit-animation: rippleDrop .6s linear; 
+    -webkit-animation: rippleDrop .6s linear;
     animation: rippleDrop .6s linear;
-  }
-  
-  @keyframes rippleDrop {
+}
+
+@keyframes rippleDrop {
+
     /* 下面是动画100%时候的状态 */
     100% {
-      transform: scale(2); 
-      -webkit-transform: scale(2);
-      opacity: 0;
+        transform: scale(2);
+        -webkit-transform: scale(2);
+        opacity: 0;
     }
-  }
-  
-  @-webkit-keyframes rippleDrop {
+}
+
+@-webkit-keyframes rippleDrop {
     100% {
-      transform: scale(2);
-      -webkit-transform: scale(2);
-      opacity: 0;
+        transform: scale(2);
+        -webkit-transform: scale(2);
+        opacity: 0;
     }
-  }
+}
+
 .photoWallPage {
-    background-image: url("../img/sectionPages/photoWall/background.png");
+    background-image: url("../img/sectionPages/photoWall/background.jpg");
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -343,7 +455,7 @@ body {
 }
 
 .timeCapsulePage {
-    background-image: url("../img/sectionPages/timeCapsule/background.png");
+    background-image: url("../img/sectionPages/timeCapsule/background.jpg");
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -430,7 +542,7 @@ body {
 }
 
 .wishDreamPage {
-    background-image: url("../img/sectionPages/wishDream/background.png");
+    background-image: url("../img/sectionPages/wishDream/background.jpg");
     background-size: 100% auto;
     background-position: top;
     background-repeat: no-repeat;
@@ -523,7 +635,7 @@ body {
 }
 
 .creativeMarketPage {
-    background-image: url("../img/sectionPages/creativeMarket/background.png");
+    background-image: url("../img/sectionPages/creativeMarket/background.jpg");
     background-size: 100% auto;
     background-position: top;
     background-repeat: no-repeat;
@@ -588,7 +700,7 @@ body {
 }
 
 .timeStationPage {
-    background-image: url("../img/sectionPages/timeStation/background.png");
+    background-image: url("../img/sectionPages/timeStation/background.jpg");
     background-size: 100% auto;
     background-position: top;
     background-repeat: no-repeat;
@@ -698,7 +810,23 @@ body {
         opacity: 0.3;
     }
 }
+@-webkit-keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
 
+@-moz-keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
 @-webkit-keyframes fadeFromRight {
     from {
         opacity: 0.3;

@@ -5,24 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">   
     <title>毕业季总宣</title>
 </head>
-
 <body>
-    <!-- <div id="loadingPage" class="loadingPage hide">
-            <img src="./img/loadingPage/bike.png" id="bike" class="bike" alt="bike" name="bike">
-            <img src="./img/loadingPage/wheel.png" id="wheel" class="wheel" alt="wheel" name="wheel">
-            <img src="./img/loadingPage/line.png" id="line" class="line" alt="line" name="line">
-            <img src="./img/loadingPage/box.png" id="box" class="box" alt="box" name="box">
-    </div> -->
-    <div id="startingPage" class="startingPage">
+    <div id="loadingPage" class="loadingPage">
+        <div id="whole" class="whole">
+            <div id="bicycle" class="bicycle">
+                <img src="./img/loadingPage/bike.svg" id="bike" class="bike" alt="bike" name="bike">
+                <img src="./img/loadingPage/wheel.svg" id="wheel" class="wheel" alt="wheel" name="wheel">
+                <img src="./img/loadingPage/wheel.svg" id="wheel2" class="wheel2" alt="wheel2" name="wheel2">
+            </div>
+            <div id="progress" class="line stripesLoader"></div>
+        </div>
+    </div>
+    <div id="startingPage" class="startingPage hide">
         <img src="./img/startingPage/graduation.png" alt="graduation" class="graduation" id="wel" name="graduation">
         <div id="toMainPage" class="toMainPage">
             <img src="./img/startingPage/arrow1.svg" alt="arrow" class="main_arrow" id="arrow1" name="arrow1">
-            <img src="./img/startingPage/arrow2.svg" alt="arrow" class="main_arrow" id="arrow2" name="arrow2">
-            <img src="./img/startingPage/arrow3.svg" alt="arrow" class="main_arrow" id="arrow3" name="arrow3">
-            <img src="./img/startingPage/arrow4.svg" alt="arrow" class="main_arrow" id="arrow4" name="arrow4">
+            <img src="./img/startingPage/arrow1.svg" alt="arrow" class="main_arrow" id="arrow2" name="arrow2">
+            <img src="./img/startingPage/arrow1.svg" alt="arrow" class="main_arrow" id="arrow3" name="arrow3">
+            <img src="./img/startingPage/arrow1.svg" alt="arrow" class="main_arrow" id="arrow4" name="arrow4">
         </div>
         <div class="person">
             <img src="./img/startingPage/p1.svg" alt="stickMan" class="stickMan" id="stickMan" name="stickMan">
@@ -169,11 +172,9 @@
             alt="许愿宝可梦">
         <!-- </div> -->
         <!-- </div> -->
-
-
-
-    </div>
+    </div>  
     <script src="./js/animation.js"></script>
+    <script src="./js/preload.js"></script>
 </body>
 
 </html>
