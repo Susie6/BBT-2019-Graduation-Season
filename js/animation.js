@@ -45,48 +45,48 @@ iconTimeStation.addEventListener("click", goTimeStation);
 iconWishDream.addEventListener("click", goWishDream);
 iconTimeCapsule.addEventListener("click", goTimeCapsule);
 
-//火柴人动画
-var image = new Array();
-image[0] = "./img/startingPage/p1.svg";
-image[1] = "./img/startingPage/p2.svg";
-image[2] = "./img/startingPage/p3.svg";
-image[3] = "./img/startingPage/p4.svg";
-image[4] = "./img/startingPage/p5.svg";
-image[5] = "./img/startingPage/p6.svg";
-image[6] = "./img/startingPage/p7.svg";
-image[7] = "./img/startingPage/p8.svg";
-image[8] = "./img/startingPage/p9.svg";
-image[9] = "./img/startingPage/p4.svg";
-image[10] = "./img/startingPage/p5.svg";
-image[11] = "./img/startingPage/p6.svg";
-image[12] = "./img/startingPage/p7.svg";
-image[13] = "./img/startingPage/p8.svg";
-image[14] = "./img/startingPage/p9.svg";
-image[15] = "./img/startingPage/p10.svg";
-image[16] = "./img/startingPage/hat1.svg";
-image[17] = "./img/startingPage/hat2.svg";
-image[18] = "./img/startingPage/hat3.svg";
-image[19] = "./img/startingPage/hat4.svg";
-image[20] = "./img/startingPage/hat5.svg";
+// //火柴人动画
+// var image = new Array();
+// image[0] = "./img/startingPage/p1.svg";
+// image[1] = "./img/startingPage/p2.svg";
+// image[2] = "./img/startingPage/p3.svg";
+// image[3] = "./img/startingPage/p4.svg";
+// image[4] = "./img/startingPage/p5.svg";
+// image[5] = "./img/startingPage/p6.svg";
+// image[6] = "./img/startingPage/p7.svg";
+// image[7] = "./img/startingPage/p8.svg";
+// image[8] = "./img/startingPage/p9.svg";
+// image[9] = "./img/startingPage/p4.svg";
+// image[10] = "./img/startingPage/p5.svg";
+// image[11] = "./img/startingPage/p6.svg";
+// image[12] = "./img/startingPage/p7.svg";
+// image[13] = "./img/startingPage/p8.svg";
+// image[14] = "./img/startingPage/p9.svg";
+// image[15] = "./img/startingPage/p10.svg";
+// image[16] = "./img/startingPage/hat1.svg";
+// image[17] = "./img/startingPage/hat2.svg";
+// image[18] = "./img/startingPage/hat3.svg";
+// image[19] = "./img/startingPage/hat4.svg";
+// image[20] = "./img/startingPage/hat5.svg";
 
-function startingAnimation() {
-    var light = document.getElementById("light");
-    var stickMan = document.getElementById("stickMan");
-console.log("xk");
-    for (var i = 0; i < image.length; i++) {
-        setTimeout((function (i) {
-            return function () {
-                stickMan.setAttribute("src", image[i]);
-            }
-        })(i), i * 100);
-    }
-    stickMan.style.animation = "walking linear 1s 0s 1 forwards";
-    setTimeout(function () {
-        light.setAttribute("src", "./img/startingPage/greenlight.svg");
-        toMainPage.style.display = "block";
-    }, 1600);
+// function startingAnimation() {
+//     var light = document.getElementById("light");
+//     var stickMan = document.getElementById("stickMan");
+//     console.log("xk");
+//     for (var i = 0; i < image.length; i++) {
+//         setTimeout((function (i) {
+//             return function () {
+//                 stickMan.setAttribute("src", image[i]);
+//             }
+//         })(i), i * 100);
+//     }
+//     stickMan.style.animation = "walking linear 1s 0s 1 forwards";
+//     setTimeout(function () {
+//         light.setAttribute("src", "./img/startingPage/greenlight.svg");
+//         toMainPage.style.display = "block";
+//     }, 1600);
     
-}
+// }
 
 var toMainPage = document.getElementById("toMainPage");
 toMainPage.addEventListener("click", main_page);
@@ -207,7 +207,6 @@ function count() {
     var name = "zongxuan";
     JSON.stringify(name);
     xhttp.send("name=" + name);
-    startingAnimation();
 }
 count();
 function goTimeStation() {
