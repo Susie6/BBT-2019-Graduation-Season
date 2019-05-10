@@ -88,6 +88,9 @@ function startPreload() {
 function handleFileProgress(event) {
     var per = document.getElementById("percent");
     per.innerHTML = "<p>loading..." + Math.ceil(event.loaded * 100) + "%</p>";
+    var bicycle = document.getElementById("bicycle");
+    var l = event.loaded *78+"%";
+    bicycle.style.left = l;
     console.log(event.loaded);
 }
 

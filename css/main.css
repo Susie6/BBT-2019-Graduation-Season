@@ -40,9 +40,9 @@ body {
     height: 80%; */
     width: 56px;
     height: 37px;
-    -webkit-animation: riding linear 0.1s 0s 1 forwards;
+    /* -webkit-animation: riding linear 0.1s 0s 1 forwards;
     -moz-animation: riding linear 0.1s 0s 1 forwards;
-    animation: riding linear 0.1s 0s 1 forwards;
+    animation: riding linear 0.1s 0s 1 forwards; */
 }
 @-webkit-keyframes riding {
     to {
