@@ -23,7 +23,21 @@ body {
     background-repeat: no-repeat;
     overflow: hidden;
 }
-
+.loadingPage .loading{
+    height: 10%;
+    width: 40%;
+    position: fixed;
+    left: 30%;
+    top: 43%;
+}
+.loadingPage .percent{
+    position: relative;
+    left: 44%;
+    top: 48%;
+    width:10%;
+    height: auto;
+    color: rgba(93, 95, 98, 0.95);
+}
 .loadingPage .whole {
     height: 8%;
     width: 72.2%;
@@ -45,7 +59,7 @@ body {
     animation: riding linear 0.1s 0s 1 forwards; */
 }
 
-@-webkit-keyframes riding {
+/* @-webkit-keyframes riding {
     to {
         transform: translateX(370%);
     }
@@ -61,7 +75,7 @@ body {
     to {
         transform: translateX(370%);
     }
-}
+} */
 
 .loadingPage .bike {
     position: absolute;
@@ -104,9 +118,10 @@ body {
 
 .loadingPage .stripesLoader {
     height: 2%;
-    width: 72.2%;
+    width: 0%;
     position: fixed;
     bottom: 56.4%;
+    left: 15%;
     /* bottom: 56.4%;
     left: 13.9%; */
     /* background: linear-gradient(90deg, #eee 50%, transparent 50%); */
@@ -138,7 +153,16 @@ body {
     box-shadow: inset 0 0px 1px rgba(0, 0, 0, 0.2),
         inset 0 -2px 1px rgba(0, 0, 0, 0.2);
 }
-
+.loadingPage .box {
+    height: 2.8%;
+    width: 73.5%;
+    position: fixed;
+    bottom: 55.65%;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid;
+    border-color: rgba(106, 109, 116, 1);  
+    border-radius: 5px;
+}
 @keyframes shift {
     to {
         background-position: -60px 100%;
@@ -347,7 +371,7 @@ body {
 }
 
 .mainPage .activities {
-    margin-top: 12%;
+    margin-top: 8%;
     display: flex;
     flex-direction: column;
     align-items: center;
