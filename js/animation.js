@@ -41,53 +41,14 @@ var iconTimeStation = document.getElementById("timeStation_icon");
 var iconWishDream = document.getElementById("wishDream_icon");
 var iconTimeCapsule = document.getElementById("timeCapsule_icon");
 
+iconTimeStation.addEventListener("click", countTimeStation);
 iconTimeStation.addEventListener("click", goTimeStation);
+iconWishDream.addEventListener("click", countWishDream);
 iconWishDream.addEventListener("click", goWishDream);
+iconTimeCapsule.addEventListener("click", countTimeCapsule);
 iconTimeCapsule.addEventListener("click", goTimeCapsule);
 
-// //火柴人动画
-// var image = new Array();
-// image[0] = "./img/startingPage/p1.svg";
-// image[1] = "./img/startingPage/p2.svg";
-// image[2] = "./img/startingPage/p3.svg";
-// image[3] = "./img/startingPage/p4.svg";
-// image[4] = "./img/startingPage/p5.svg";
-// image[5] = "./img/startingPage/p6.svg";
-// image[6] = "./img/startingPage/p7.svg";
-// image[7] = "./img/startingPage/p8.svg";
-// image[8] = "./img/startingPage/p9.svg";
-// image[9] = "./img/startingPage/p4.svg";
-// image[10] = "./img/startingPage/p5.svg";
-// image[11] = "./img/startingPage/p6.svg";
-// image[12] = "./img/startingPage/p7.svg";
-// image[13] = "./img/startingPage/p8.svg";
-// image[14] = "./img/startingPage/p9.svg";
-// image[15] = "./img/startingPage/p10.svg";
-// image[16] = "./img/startingPage/hat1.svg";
-// image[17] = "./img/startingPage/hat2.svg";
-// image[18] = "./img/startingPage/hat3.svg";
-// image[19] = "./img/startingPage/hat4.svg";
-// image[20] = "./img/startingPage/hat5.svg";
-
-// function startingAnimation() {
-//     var light = document.getElementById("light");
-//     var stickMan = document.getElementById("stickMan");
-//     console.log("xk");
-//     for (var i = 0; i < image.length; i++) {
-//         setTimeout((function (i) {
-//             return function () {
-//                 stickMan.setAttribute("src", image[i]);
-//             }
-//         })(i), i * 100);
-//     }
-//     stickMan.style.animation = "walking linear 1s 0s 1 forwards";
-//     setTimeout(function () {
-//         light.setAttribute("src", "./img/startingPage/greenlight.svg");
-//         toMainPage.style.display = "block";
-//     }, 1600);
-    
-// }
-
+//开始页面跳转到导航页面
 var toMainPage = document.getElementById("toMainPage");
 toMainPage.addEventListener("click", main_page);
 
@@ -188,7 +149,7 @@ function hideWishDream() {
     // wishDream.classList.remove("show");
     wishDream.classList.add("hide");
 }
-
+//总宣页面总浏览数
 function count() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -209,47 +170,121 @@ function count() {
     xhttp.send("name=" + name);
 }
 count();
+//时间获取
+var now = new Date();
+var date = new Date(now.getFullYear(),now.getMonth(),now.getDate());
+//跳转以及活动时间判断
 function goTimeStation() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
-            console.log("流年车站");
+            var res = JSON.parse(xhttp.responseText);
+            var arr = res.data.split("-");
+            var endTime = new Date(arr[0], arr[1], arr[2]);
+            if(date>=endTime){
+                alert("活动已结束");
+            }else{
+                //跳转链接记得改哦
+                window.location.href = "https://www.baidu.com/";
+            }
         }
     };
-    xhttp.open("POST", "http://111.230.183.100/zongxuan/zongxuan.php", true);
+    //这个请求地址要改
+    xhttp.open("POST", "http://111.230.183.100/zongxuan/DDL.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     var name = "lncz";
     JSON.stringify(name);
     xhttp.send("name=" + name);
-    // window.location.href =
 }
 
 function goTimeCapsule() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
-            console.log("时光胶囊");
+            var res = JSON.parse(xhttp.responseText);
+            var arr = res.data.split("-");
+            var endTime = new Date(arr[0], arr[1], arr[2]);
+            if(date>=endTime){
+                alert("活动已结束");
+            }else{
+                //跳转链接记得改哦
+                window.location.href = "https://www.baidu.com/";
+            }
         }
     };
-    xhttp.open("POST", "http://111.230.183.100/zongxuan/zongxuan.php", true);
+    //这个请求地址要改
+    xhttp.open("POST", "http://111.230.183.100/zongxuan/DDL.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     var name = "sgjn";
     JSON.stringify(name);
     xhttp.send("name=" + name);
-    // window.location.href =
 }
 
 function goWishDream() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
-            console.log("许愿宝可梦");
+            var res = JSON.parse(xhttp.responseText);
+            var arr = res.data.split("-");
+            var endTime = new Date(arr[0], arr[1], arr[2]);
+            if(date>=endTime){
+                alert("活动已结束");
+            }else{
+                //跳转链接记得改哦
+                window.location.href = "https://www.baidu.com/";
+            }
         }
     };
-    xhttp.open("POST", "http://111.230.183.100/zongxuan/zongxuan.php", true);
+    //这个请求地址要改
+    xhttp.open("POST", "http://111.230.183.100/zongxuan/DDL.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     console.log(name);
     JSON.stringify(name);
     xhttp.send("name=" + name);
     // window.location.href =
+}
+//记录引流数
+function countTimeStation() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            console.log("流年车站");
+        }
+    };
+    //这个请求地址要改
+    xhttp.open("POST", "http://111.230.183.100/zongxuan/zongxuan.php", true);
+    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    var name = "lncz";
+    JSON.stringify(name);
+    xhttp.send("name=" + name);
+}
+
+function countTimeCapsule() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            console.log("时光胶囊");
+        }
+    };
+    //这个请求地址要改
+    xhttp.open("POST", "http://111.230.183.100/zongxuan/zongxuan.php", true);
+    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    var name = "sgjn";
+    JSON.stringify(name);
+    xhttp.send("name=" + name);
+}
+
+function countWishDream() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            console.log("许愿宝可梦");
+        }
+    };
+    //这个请求地址要改
+    xhttp.open("POST", "http://111.230.183.100/zongxuan/zongxuan.php", true);
+    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    console.log(name);
+    JSON.stringify(name);
+    xhttp.send("name=" + name);
 }

@@ -12,69 +12,62 @@ var mainfest;
 
 function setupManifest() {
     mainfest = [{
-            src: "/Propagation/img/startingPage/background.jpg"
-        },
-        {
-            src: "/Propagation/img/mainPage/background.jpg"
-        }, {
-            src: "/Propagation/img/sectionPages/photoWall/background.jpg"
-        },
-        {
-            src: "/Propagation/img/sectionPages/timeCapsule/background.jpg"
-        }, {
-            src: "/Propagation/img/sectionPages/wishDream/background.jpg"
-        },
-        {
-            src: "/Propagation/img/sectionPages/creativeMarket/background.jpg"
-        }, {
-            src: "/Propagation/img/sectionPages/timeStation/background.jpg"
-        },
-        {
-            src: "/Propagation/img/graduation.png"
-        }, {
-            src: "/Propagation/img/startingPage/redlight.svg"
-        },
-        {
-            src: "/Propagation/img/startingPage/greenlight.svg"
-        }, {
-            src: "/Propagation/img/startingPage/p1.svg"
-        },
-        {
-            src: "/Propagation/img/startingPage/p2.svg"
-        }, {
-            src: "/Propagation/img/startingPage/p3.svg"
-        },
-        {
-            src: "/Propagation/img/startingPage/p4.svg"
-        }, {
-            src: "/Propagation/img/startingPage/p5.svg"
-        },
-        {
-            src: "/Propagation/img/startingPage/p6.svg"
-        }, {
-            src: "/Propagation/img/startingPage/p7.svg"
-        },
-        {
-            src: "/Propagation/img/startingPage/p8.svg"
-        }, {
-            src: "/Propagation/img/startingPage/p9.svg"
-        },
-        {
-            src: "/Propagation/img/startingPage/p10.svg"
-        }, {
-            src: "/Propagation/img/startingPage/hat1.svg"
-        },
-        {
-            src: "/Propagation/img/startingPage/hat2.svg"
-        }, {
-            src: "/Propagation/img/startingPage/hat3.svg"
-        },
-        {
-            src: "/Propagation/img/startingPage/hat4.svg"
-        }, {
-            src: "/Propagation/img/startingPage/hat5.svg"
-        },
-    ];
+        src: "/Propagation/img/startingPage/p1.svg"
+    }, {
+        src: "/Propagation/img/startingPage/p2.svg"
+    }, {
+        src: "/Propagation/img/startingPage/p3.svg"
+    }, {
+        src: "/Propagation/img/startingPage/p4.svg"
+    }, {
+        src: "/Propagation/img/startingPage/p5.svg"
+    }, {
+        src: "/Propagation/img/startingPage/p6.svg"
+    }, {
+        src: "/Propagation/img/startingPage/p7.svg"
+    }, {
+        src: "/Propagation/img/startingPage/p8.svg"
+    }, {
+        src: "/Propagation/img/startingPage/p9.svg"
+    }, {
+        src: "/Propagation/img/startingPage/p10.svg"
+    }, {
+        src: "/Propagation/img/startingPage/hat1.svg"
+    }, {
+        src: "/Propagation/img/startingPage/hat2.svg"
+    }, {
+        src: "/Propagation/img/startingPage/hat3.svg"
+    }, {
+        src: "/Propagation/img/startingPage/hat4.svg"
+    }, {
+        src: "/Propagation/img/startingPage/hat5.svg"
+    }, {
+        src: "/Propagation/img/graduation.png"
+    }, {
+        src: "/Propagation/img/startingPage/redlight.svg"
+    }, {
+        src: "/Propagation/img/startingPage/greenlight.svg"
+    }, {
+        src: "/Propagation/img/startingPage/background.jpg"
+    }, {
+        src: "/Propagation/img/mainPage/background.jpg"
+    }, {
+        src: "/Propagation/img/sectionPages/photoWall/background.jpg"
+    }, {
+        src: "/Propagation/img/sectionPages/timeCapsule/background.jpg"
+    }, {
+        src: "/Propagation/img/sectionPages/wishDream/background.jpg"
+    }, {
+        src: "/Propagation/img/sectionPages/creativeMarket/background.jpg"
+    }, {
+        src: "/Propagation/img/sectionPages/timeStation/background.jpg"
+    }, {
+        src: "/Propagation/img/graduation.png"
+    }, {
+        src: "/Propagation/img/startingPage/redlight.svg"
+    }, {
+        src: "/Propagation/img/startingPage/greenlight.svg"
+    }, ];
 }
 
 function startPreload() {
@@ -90,11 +83,10 @@ function handleFileProgress(event) {
     per.innerHTML = "<p>" + Math.ceil(event.loaded * 100) + "%</p>";
     var bicycle = document.getElementById("bicycle");
     var stripesLoader = document.getElementById("progress");
-    var l = event.loaded *82+"%";
-    var line_per = event.loaded*72.2+"%";
+    var l = event.loaded * 82 + "%";
+    var line_per = event.loaded * 72.2 + "%";
     stripesLoader.style.width = line_per;
     bicycle.style.left = l;
-    console.log(event.loaded);
 }
 
 function loadComplete() {
@@ -137,12 +129,12 @@ function startingAnimation() {
             }
         })(i), i * 100);
     }
-    stickMan.style.animation = "walking linear 1.5s 0s 1 forwards";
+    stickMan.style.animation = "walking linear 1.5s 0.1s 1 forwards";
     setTimeout(function () {
         light.setAttribute("src", "./img/startingPage/greenlight.svg");
         toMainPage.style.display = "block";
     }, 1600);
-    
+
 }
 setupManifest();
 startPreload();
