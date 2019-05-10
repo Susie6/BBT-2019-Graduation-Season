@@ -189,7 +189,7 @@ function hideWishDream() {
     wishDream.classList.add("hide");
 }
 
-window.onload = function count() {
+function count() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
@@ -209,7 +209,7 @@ window.onload = function count() {
     xhttp.send("name=" + name);
     startingAnimation();
 }
-
+count();
 function goTimeStation() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
