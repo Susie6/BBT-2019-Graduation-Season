@@ -317,7 +317,11 @@ div{
     animation: fadeFromRight ease 0.7s 0s 1 forwards;
     animation-fill-mode: forwards;
 }
-
+.mainPage.fadeIn{
+    -webkit-animation: fadeIn linear 0.7s 0s 1 forwards;
+    -moz-animation: fadeIn linear 0.7s 0s 1 forwards;
+    animation: fadeIn linear 0.7s 0s 1 forwards;
+}
 .mainPage.hide {
     display: none;
 }
@@ -358,7 +362,7 @@ div{
     min-height: 58px;
 }
 
-.ripple {
+/* .ripple {
     position: absolute;
     border-radius: 50% 50%;
     background: rgba(255, 255, 255, 0.4);
@@ -368,14 +372,12 @@ div{
 }
 
 .ripple.rippleEffect {
-    /* 执行时长0.6s、效果为渐变(linear)、名称为rippleDrop的动画 */
     -webkit-animation: rippleDrop .6s linear;
     animation: rippleDrop .6s linear;
 }
 
 @keyframes rippleDrop {
 
-    /* 下面是动画100%时候的状态 */
     100% {
         transform: scale(2);
         -webkit-transform: scale(2);
@@ -389,7 +391,7 @@ div{
         -webkit-transform: scale(2);
         opacity: 0;
     }
-}
+} */
 
 .photoWallPage {
     background-image: url("../img/sectionPages/photoWall/background.jpg");
@@ -830,10 +832,10 @@ div{
         opacity: 1;
     }
 }
-@-webkit-keyframes fadeFromRight {
+@-webkit-keyframes fadeFromLeft {
     from {
         opacity: 0.3;
-        -webkit-transform: translateX(100%);
+        -webkit-transform: translateX(-100%);
     }
 
     to {
@@ -842,10 +844,10 @@ div{
     }
 }
 
-@-moz-keyframes fadeFromRight {
+@-moz-keyframes fadeFromLeft {
     from {
         opacity: 0.3;
-        -moz-transform: translateX(100%);
+        -moz-transform: translateX(-100%);
     }
 
     to {
@@ -854,10 +856,10 @@ div{
     }
 }
 
-@keyframes fadeFromRight {
+@keyframes fadeFromLeft {
     from {
         opacity: 0.3;
-        transform: translateX(100%);
+        transform: translateX(-100%);
     }
 
     to {
