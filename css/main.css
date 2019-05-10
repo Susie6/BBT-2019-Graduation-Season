@@ -5,8 +5,11 @@ body {
     padding: 0%;
     margin: 0%;
     /* overflow-y: scroll; */
+    
 }
-
+div{
+    user-select: none;
+}
 .loadingPage {
     position: fixed;
     height: 100%;
@@ -145,11 +148,11 @@ body {
 .loadingPage.hide {
     display: none;
 }
-.loadingPage.fadeOut{
+/* .loadingPage.fadeOut{
     -webkit-animation: fadeOut linear 0.7s 0s 1 forwards;
     -moz-animation: fadeOut linear 0.7s 0s 1 forwards;
     animation: fadeOut linear 0.7s 0s 1 forwards;
-}
+} */
 .startingPage {
     position: fixed;
     height: 100%;
@@ -167,11 +170,11 @@ body {
     /* display: flex;
     flex-direction: column; */
 }
-.startingPage.fadeIn{
+/* .startingPage.fadeIn{
     -webkit-animation: fadeIn linear 0.7s 0s 1 forwards;
     -moz-animation: fadeIn linear 0.7s 0s 1 forwards;
     animation: fadeIn linear 0.7s 0s 1 forwards;
-}
+} */
 .startingPage.fadeOut {
     -webkit-animation: fadeOut linear 0.7s 0s 1 forwards;
     -moz-animation: fadeOut linear 0.7s 0s 1 forwards;
@@ -197,7 +200,7 @@ body {
     position: absolute;
     right: 0;
     top: 62%;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .startingPage .main_arrow {
@@ -335,7 +338,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    cursor: pointer;
+    /* cursor: pointer; */
     margin-bottom: 10%;
 }
 
@@ -414,7 +417,7 @@ body {
     right: 3.5%; */
     margin-top: 12%;
     margin-right: 10%;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .photoWallPage .back {
@@ -479,7 +482,7 @@ body {
     right: 3.5%; */
     margin-top: 12%;
     margin-right: 10%;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .timeCapsulePage .back {
@@ -536,7 +539,7 @@ body {
     /* bottom: 5%; */
     width: 14.2%;
     height: 9.4%;
-    cursor: pointer;
+    /* cursor: pointer; */
     margin-left: 64.6%;
     margin-bottom: 11%;
 }
@@ -569,7 +572,7 @@ body {
     right: 3.5%; */
     margin-top: 12%;
     margin-right: 10%;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .wishDreamPage .back {
@@ -629,7 +632,7 @@ body {
     height: 7%;
     min-width: 58px;
     min-height: 44.7px;
-    cursor: pointer;
+    /* cursor: pointer; */
     margin-left: 65%;
     margin-bottom: 11%;
 }
@@ -662,7 +665,7 @@ body {
     right: 3.5%; */
     margin-top: 12%;
     margin-right: 10%;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .creativeMarketPage .back {
@@ -727,7 +730,7 @@ body {
     right: 3.5%; */
     margin-top: 12%;
     margin-right: 10%;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .timeStationPage .back {
@@ -788,7 +791,7 @@ body {
     height: 6.1%;
     min-width: 59.3px;
     min-height: 39px;
-    cursor: pointer;
+    /* cursor: pointer; */
     margin-left: 64%;
     margin-bottom: 11%;
 }

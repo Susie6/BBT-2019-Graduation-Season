@@ -35,23 +35,25 @@ function loading() {
 loading();
 
 document.onreadystatechange = loadingAnimation;
+
 function loadingAnimation() {
-    if(document.readyState == "complete" ){
+    if (document.readyState == "complete") {
         console.log("加载完毕");
-        loadingPage.classList.add("fadeOut");
-        startingPage.classList.remove("hide");
-        startingPage.classList.add("fadeIn");    
-    setTimeout(function () {
+        //  loadingPage.classList.add("fadeOut");
         loadingPage.classList.add("hide");
-    }, 700);    
+        startingPage.classList.remove("hide");
+        //     startingPage.classList.add("fadeIn");    
+        // setTimeout(function () {
+        //     loadingPage.classList.add("hide");
+        // }, 700);    
+        // }
+        // setTimeout(function () {
+        //     loadingPage.classList.add("fadeOut");
+        //     startingPage.classList.remove("hide");
+        //     startingPage.classList.add("fadeIn");
+        // }, 2000);
+        // setTimeout(function () {
+        //     loadingPage.classList.add("hide");
+        // }, 3000);
     }
-    // setTimeout(function () {
-    //     loadingPage.classList.add("fadeOut");
-    //     startingPage.classList.remove("hide");
-    //     startingPage.classList.add("fadeIn");
-    // }, 2000);
-    // setTimeout(function () {
-    //     loadingPage.classList.add("hide");
-    // }, 3000);
 }
-//loadingAnimation();
