@@ -133,19 +133,31 @@ function show(event) {
     if (mainPage.classList.contains("fadeFromRight")) {
         mainPage.classList.remove("fadeFromRight");
     }
-
-    setTimeout(function () {
-        mainPage.classList.add("hide");
-        show_this.classList.remove("hide");
-    }, 700);
+    // mainPage.classList.add("fadeOut");
+    show_this.classList.remove("hide");
+    mainPage.classList.add("hide");
+    // show_this.classList.add("fadeFromRight");
+    // setTimeout(function () {
+    //     mainPage.classList.add("hide");
+    //     mainPage.classList.remove("fadeOut");
+    //     show_this.classList.remove("fadeFromRight");
+    // }, 700);
 
 
 }
 
 function hidePhotoWall() {
+    // mainPage.classList.remove("hide");
+    // // mainPage.classList.add("show");
+    // // photoWall.classList.remove("show");
+    // mainPage.classList.add("fadeIn");
+    // photoWall.classList.add("fadeToRight");
+    // setTimeout(function () {
+    //     photoWall.classList.add("hide");
+    //     photoWall.classList.remove("fadeToRight");
+    //     mainPage.classList.remove("fadeIn");
+    // }, 700);
     mainPage.classList.remove("hide");
-    // mainPage.classList.add("show");
-    // photoWall.classList.remove("show");
     photoWall.classList.add("hide");
 }
 

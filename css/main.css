@@ -315,12 +315,16 @@ div{
     -webkit-animation: fadeFromRight ease 0.7s 0s 1 forwards;
     -moz-animation: fadeFromRight ease 0.7s 0s 1 forwards;
     animation: fadeFromRight ease 0.7s 0s 1 forwards;
-    animation-fill-mode: forwards;
 }
 .mainPage.fadeIn{
     -webkit-animation: fadeIn linear 0.7s 0s 1 forwards;
     -moz-animation: fadeIn linear 0.7s 0s 1 forwards;
     animation: fadeIn linear 0.7s 0s 1 forwards;
+}
+.mainPage.fadeOut{
+    -webkit-animation: fadeOut linear 0.7s 0s 1 forwards;
+    -moz-animation: fadeOut linear 0.7s 0s 1 forwards;
+    animation: fadeOut linear 0.7s 0s 1 forwards;
 }
 .mainPage.hide {
     display: none;
@@ -411,7 +415,16 @@ div{
 .photoWallPage.hide {
     display: none;
 }
-
+.photoWallPage.fadeFromLeft{
+    -webkit-animation: fadeFromLeft ease 0.7s 0s 1 forwards;
+    -moz-animation: fadeFromLeft ease 0.7s 0s 1 forwards;
+    animation: fadeFromLeft ease 0.7s 0s 1 forwards;
+}
+.photoWallPage.fadeToRight{
+    -webkit-animation: fadeToRight ease 0.7s 0s 1 forwards;
+    -moz-animation: fadeToRight ease 0.7s 0s 1 forwards;
+    animation: fadeToRight ease 0.7s 0s 1 forwards;
+}
 .photoWallPage .goBack {
     position: relative;
     /* position: absolute; */
@@ -476,7 +489,11 @@ div{
 .timeCapsulePage.hide {
     display: none;
 }
-
+.timeCapsulePage.fadeFromLeft{
+    -webkit-animation: fadeFromLeft ease 0.7s 0s 1 forwards;
+    -moz-animation: fadeFromLeft ease 0.7s 0s 1 forwards;
+    animation: fadeFromLeft ease 0.7s 0s 1 forwards;
+}
 .timeCapsulePage .goBack {
     /* position: relative; */
     /* position: absolute; */
@@ -566,7 +583,11 @@ div{
 .wishDreamPage.hide {
     display: none;
 }
-
+.wishDreamPage.fadeFromLeft{
+    -webkit-animation: fadeFromLeft ease 0.7s 0s 1 forwards;
+    -moz-animation: fadeFromLeft ease 0.7s 0s 1 forwards;
+    animation: fadeFromLeft ease 0.7s 0s 1 forwards;
+}
 .wishDreamPage .goBack {
     position: relative;
     /* position: absolute; */
@@ -659,7 +680,11 @@ div{
 .creativeMarketPage.hide {
     display: none;
 }
-
+.creativeMarketPage.fadeFromLeft{
+    -webkit-animation: fadeFromLeft ease 0.7s 0s 1 forwards;
+    -moz-animation: fadeFromLeft ease 0.7s 0s 1 forwards;
+    animation: fadeFromLeft ease 0.7s 0s 1 forwards;
+}
 .creativeMarketPage .goBack {
     position: relative;
     /* position: absolute; */
@@ -724,7 +749,11 @@ div{
 .timeStationPage.hide {
     display: none;
 }
-
+.timeStationPage.fadeFromLeft{
+    -webkit-animation: fadeFromLeft ease 0.7s 0s 1 forwards;
+    -moz-animation: fadeFromLeft ease 0.7s 0s 1 forwards;
+    animation: fadeFromLeft ease 0.7s 0s 1 forwards;
+}
 .timeStationPage .goBack {
     position: relative;
     /* position: absolute; */
@@ -867,7 +896,39 @@ div{
         transform: translateX(0);
     }
 }
+@-webkit-keyframes fadeToRight{
+    from {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
 
+    to {
+        opacity: 0;
+        -webkit-transform: translateX(-100%);
+    }
+}
+@-moz-keyframes fadeToRight{
+    from {
+        opacity: 1;
+        -moz-transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        -moz-transform: translateX(-100%);
+    }
+}
+@keyframes fadeToRight{
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
 @keyframes walk {
     0% {
         background-position: 0px 0px;
