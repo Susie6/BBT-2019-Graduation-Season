@@ -131,7 +131,7 @@ function startingAnimation() {
             }
         })(i), i * 100);
     }
-    stickMan.style.animation = "walking linear 1s 0s 1 forwards";
+    stickMan.style.animation = "walking linear 1.5s 0s 1 forwards";
     setTimeout(function () {
         light.setAttribute("src", "./img/startingPage/greenlight.svg");
         toMainPage.style.display = "block";
