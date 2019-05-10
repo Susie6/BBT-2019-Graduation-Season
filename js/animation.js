@@ -72,7 +72,7 @@ image[20] = "./img/startingPage/hat5.svg";
 function startingAnimation() {
     var light = document.getElementById("light");
     var stickMan = document.getElementById("stickMan");
-
+console.log("xk");
     for (var i = 0; i < image.length; i++) {
         setTimeout((function (i) {
             return function () {
@@ -80,12 +80,12 @@ function startingAnimation() {
             }
         })(i), i * 100);
     }
-    stickMan.style.animation = "walking linear 1.6s 0s 1 forwards";
+    stickMan.style.animation = "walking linear 1s 0s 1 forwards";
     setTimeout(function () {
         light.setAttribute("src", "./img/startingPage/greenlight.svg");
         toMainPage.style.display = "block";
     }, 1600);
-
+    
 }
 
 var toMainPage = document.getElementById("toMainPage");
