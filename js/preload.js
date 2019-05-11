@@ -8,6 +8,7 @@ var creativeMarket = document.getElementById("creativeMarketPage");
 var timeStation = document.getElementById("timeStationPage");
 
 var preload;
+var preload2;
 var mainfest;
 
 function setupManifest() {
@@ -49,26 +50,19 @@ function setupManifest() {
         src: "/Propagation/img/startingPage/greenlight.svg"
     }, {
         src: "/Propagation/img/startingPage/background.jpg"
-    }, {
+    }, ];
+    mainfest2 = [{
         src: "/Propagation/img/mainPage/background.jpg"
-    }, 
-    // {
-    //     src: "/Propagation/img/sectionPages/photoWall/background.jpg"
-    // }, {
-    //     src: "/Propagation/img/sectionPages/timeCapsule/background.jpg"
-    // }, {
-    //     src: "/Propagation/img/sectionPages/wishDream/background.jpg"
-    // }, {
-    //     src: "/Propagation/img/sectionPages/creativeMarket/background.jpg"
-    // }, {
-    //     src: "/Propagation/img/sectionPages/timeStation/background.jpg"
-    // }, 
-    {
-        src: "/Propagation/img/graduation.png"
     }, {
-        src: "/Propagation/img/startingPage/redlight.svg"
+        src: "/Propagation/img/sectionPages/photoWall/background.jpg"
     }, {
-        src: "/Propagation/img/startingPage/greenlight.svg"
+        src: "/Propagation/img/sectionPages/timeCapsule/background.jpg"
+    }, {
+        src: "/Propagation/img/sectionPages/wishDream/background.jpg"
+    }, {
+        src: "/Propagation/img/sectionPages/creativeMarket/background.jpg"
+    }, {
+        src: "/Propagation/img/sectionPages/timeStation/background.jpg"
     }, ];
 }
 
@@ -80,6 +74,13 @@ function startPreload() {
     preload.loadManifest(mainfest);
 }
 
+function startPreload2() {
+    preload2 = new createjs.LoadQueue(true);
+    preload2.setMaxConnections(1);
+    preload2.loadManifest(mainfest2);
+}
+setupManifest();
+startPreload();
 function handleFileProgress(event) {
     var per = document.getElementById("percent");
     per.innerHTML = "<p>" + Math.ceil(event.loaded * 100) + "%</p>";
@@ -137,5 +138,5 @@ function startingAnimation() {
     }, 1600);
 
 }
-setupManifest();
-startPreload();
+
+startPreload2();
