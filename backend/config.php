@@ -2,18 +2,20 @@
 // header('Access-Control-Allow-Credentials: true');
 header('Access-Control-Allow-Origin:*');
 header('Content-Type: application/json');
-
 $SERVER="localhost";
 $USERNAME="root";
 $PASSWORD="";//密码示例
 $DB="zongxuan";
-
 //DDL示例
 $zongxuanDDL = "2019-5-4";
 $sgjnDDL = "2019-4-24";
 $lnczDDL = "2019-5-12";
 $xybkmDDL = "2019-5-10";
-
+//活动开始时间示例
+$zongxuanBT = "2019-4-29";
+$sgjnBT = "2019-5-14";
+$lnczBT = "2019-5-18";
+$xybkmBT = "2019-5-23";
 //连接服务器
 $con=mysqli_connect($SERVER,$USERNAME,$PASSWORD,$DB);
 if(!$con)
@@ -27,10 +29,8 @@ if(!$con)
     exit;
 }
 mysqli_query($con,"SET NAMES utf8mb4");
-
 //设置默认时区
 date_default_timezone_set("Asia/Shanghai");
-
 //判断参数是否合法
 function judge($name)
 {
@@ -45,14 +45,12 @@ function judge($name)
         exit;
     }
 }
-
 //增加访问量
 function add($name)
 {
     global $con;
     $sql="UPDATE click SET $name=$name+1";
     mysqli_query($con,$sql);
-
     $sql="SELECT $name From click";
     $res=mysqli_query($con,$sql);
     $amount=mysqli_fetch_array($res);
@@ -63,9 +61,7 @@ function add($name)
         "data" => $amount
     ];
     echo json_encode($result);
-
 }
-
 //根据Y-m-d的格式返回格林威治时间
 function getTime($pattern)
 {
@@ -73,7 +69,6 @@ function getTime($pattern)
     $time = date_timestamp_get($timeObj);
     return $time;
 }
-
 //判断活动是否截止，截止返回true
 function overdue($name)
 {
@@ -88,7 +83,6 @@ function overdue($name)
     $lncz = getTime($lnczDDL);
     $xybkm = getTime($xybkmDDL);
     
-
     if($name == "zongxuan" && $time > $zongxuan)
         return true;
     else if($name == "sgjn" && $time > $sgjn)
@@ -100,7 +94,6 @@ function overdue($name)
     
     return false;
 }
-
 //判断活动是否截止,截止返回信息
 function isDDL($name)
 {
@@ -110,7 +103,6 @@ function isDDL($name)
         $sql="SELECT $name From click";
         $res=mysqli_query($con,$sql);
         $amount=mysqli_fetch_array($res);
-
         $result = [
             "errcode" => 3,
             "msg" => "活动时间已截止",
@@ -120,7 +112,6 @@ function isDDL($name)
         exit;
     }
 }
-
 //获取活动DDL
 function DDL($name)
 {
@@ -129,37 +120,38 @@ function DDL($name)
     global $lnczDDL;
     global $xybkmDDL;
     
+    global $zongxuanBT;
+    global $sgjnBT;
+    global $lnczBT;
+    global $xybkmBT;
     $result = [
         "errcode" => 0,
         "msg" => "活动时间",
-        "data" => ""
+        "data" => [
+            "beginTime" => "",
+            "DDL" => ""
+        ]
     ];
-
     if($name == "zongxuan")
-        $result["data"]=$zongxuanDDL;
+    {
+        $result["data"]["beginTime"]=$zongxuanBT;
+        $result["data"]["DDL"]=$zongxuanDDL;
+    }
     else if($name == "sgjn")
-        $result["data"]=$sgjnDDL;
+    {
+        $result["data"]["beginTime"]=$sgjnBT;
+        $result["data"]["DDL"]=$sgjnDDL;
+    }
     else if($name == "lncz")
-        $result["data"]=$lnczDDL;
+    {
+        $result["data"]["beginTime"]=$lnczBT;
+        $result["data"]["DDL"]=$lnczDDL;
+    }
     else if($name == "xybkm")
-        $result["data"]=$xybkmDDL;
-
+    {
+        $result["data"]["beginTime"]=$xybkmBT;
+        $result["data"]["DDL"]=$xybkmDDL;
+    }
     echo json_encode($result);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>

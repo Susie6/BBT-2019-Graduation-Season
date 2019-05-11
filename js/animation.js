@@ -169,25 +169,33 @@ function count() {
 }
 count();
 //时间获取
-var now = new Date();
-var date = new Date(now.getFullYear(),now.getMonth(),now.getDate());
+var date = new Date();
 //跳转以及活动时间判断
 function goTimeStation() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             var res = JSON.parse(xhttp.responseText);
-            var arr = res.data.split("-");
-            var endTime = new Date(arr[0], arr[1], arr[2]);
-            if(date>=endTime){
-                alert("活动已结束");
-            }else{
+            var begin = res.data.beginTime.replace("-","/");
+            var end = res.data.DDL.replace("-","/");
+            var beginTime = new Date(begin);
+            var endTime = new Date(end);
+            var tips = document.getElementById("tips2");
+            var msg = document.getElementById("msg2");
+            if (date < beginTime) {
+                msg.innerHTML = "活动开始时间<br />" + res.data.beginTime;
+                tips.style.display = "block";
+                tips.style.animation = "scaleIn 0.3s linear 0s 1 forwards";
+            } else if (date >= endTime) {
+                msg.innerHTML = "活动已结束 <br />(≧ω≦)/";
+                tips.style.display = "block";
+                tips.style.animation = "scaleIn 0.3s linear 0s 1 forwards";
+            } else {
                 //跳转链接记得改哦
                 window.location.href = "https://www.baidu.com/";
             }
         }
     };
-    //这个请求地址要改
     xhttp.open("POST", "http://111.230.183.100/zongxuan/DDL.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     var name = "lncz";
@@ -200,17 +208,28 @@ function goTimeCapsule() {
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             var res = JSON.parse(xhttp.responseText);
-            var arr = res.data.split("-");
-            var endTime = new Date(arr[0], arr[1], arr[2]);
-            if(date>=endTime){
-                alert("活动已结束");
-            }else{
+            console.log(res);
+            var begin = res.data.beginTime.replace("-","/");
+            var end = res.data.DDL.replace("-","/");
+            var beginTime = new Date(begin);
+            var endTime = new Date(end);
+            var tips = document.getElementById("tips1");
+            var msg = document.getElementById("msg1");
+            console.log("开始时间："+beginTime+"现在时间："+date+"结束时间："+endTime);
+            if (date <= beginTime) {
+                msg.innerHTML = "活动开始时间<br />" + res.data.beginTime;
+                tips.style.display = "block";
+                tips.style.animation = "scaleIn 0.3s linear 0s 1 forwards";
+            } else if (date >= endTime) {
+                msg.innerHTML = "活动已结束 <br />(≧ω≦)/";
+                tips.style.display = "block";
+                tips.style.animation = "scaleIn 0.3s linear 0s 1 forwards";
+            } else {
                 //跳转链接记得改哦
                 window.location.href = "https://www.baidu.com/";
             }
         }
     };
-    //这个请求地址要改
     xhttp.open("POST", "http://111.230.183.100/zongxuan/DDL.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     var name = "sgjn";
@@ -223,19 +242,32 @@ function goWishDream() {
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             var res = JSON.parse(xhttp.responseText);
-            var arr = res.data.split("-");
-            var endTime = new Date(arr[0], arr[1], arr[2]);
-            if(date>=endTime){
-                alert("活动已结束");
-            }else{
+            var begin = res.data.beginTime.replace("-","/");
+            var end = res.data.DDL.replace("-","/");
+            var beginTime = new Date(begin);
+            var endTime = new Date(end);
+            var tips = document.getElementById("tips3");
+            var msg = document.getElementById("msg3");
+            console.log(date);
+            if (date < beginTime) {
+                msg.innerHTML = "活动开始时间<br />" + res.data.beginTime;
+                tips.style.display = "block";
+                tips.style.animation = "scaleIn 0.3s linear 0s 1 forwards";
+                console.log("现在日期小");
+            } else if (date >= endTime) {
+                msg.innerHTML = "活动已结束 <br />(≧ω≦)/";
+                tips.style.display = "block";
+                tips.style.animation = "scaleIn 0.3s linear 0s 1 forwards";
+                console.log("现在日期大");
+            } else {
                 //跳转链接记得改哦
                 window.location.href = "https://www.baidu.com/";
             }
         }
     };
-    //这个请求地址要改
     xhttp.open("POST", "http://111.230.183.100/zongxuan/DDL.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    var name = "xybkm"
     console.log(name);
     JSON.stringify(name);
     xhttp.send("name=" + name);
@@ -249,7 +281,6 @@ function countTimeStation() {
             console.log("流年车站");
         }
     };
-    //这个请求地址要改
     xhttp.open("POST", "http://111.230.183.100/zongxuan/zongxuan.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     var name = "lncz";
@@ -264,7 +295,6 @@ function countTimeCapsule() {
             console.log("时光胶囊");
         }
     };
-    //这个请求地址要改
     xhttp.open("POST", "http://111.230.183.100/zongxuan/zongxuan.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     var name = "sgjn";
@@ -279,10 +309,35 @@ function countWishDream() {
             console.log("许愿宝可梦");
         }
     };
-    //这个请求地址要改
     xhttp.open("POST", "http://111.230.183.100/zongxuan/zongxuan.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    var name = "xybkm";
     console.log(name);
     JSON.stringify(name);
     xhttp.send("name=" + name);
+}
+//弹窗消失
+function disappear1(){
+    var tips = document.getElementById("tips1");
+    var msg = document.getElementById("msg1");
+    tips.style.animation = "scaleOut 0.3s linear 0s 1 forwards";
+    setTimeout(function () {
+        tips.style.display = "none";
+    }, 300);
+}
+function disappear2(){
+    var tips = document.getElementById("tips2");
+    var msg = document.getElementById("msg2");
+    tips.style.animation = "scaleOut 0.3s linear 0s 1 forwards";
+    setTimeout(function () {
+        tips.style.display = "none";
+    }, 300);
+}
+function disappear3(){
+    var tips = document.getElementById("tips3");
+    var msg = document.getElementById("msg3");
+    tips.style.animation = "scaleOut 0.3s linear 0s 1 forwards";
+    setTimeout(function () {
+        tips.style.display = "none";
+    }, 300);
 }

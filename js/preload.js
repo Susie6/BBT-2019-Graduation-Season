@@ -51,7 +51,10 @@ function setupManifest() {
     }, {
         src: "/Propagation/img/startingPage/background.jpg"
     }, ];
-    mainfest2 = [{
+   
+}
+function setupManifest2(){
+     mainfest2 = [{
         src: "/Propagation/img/mainPage/background.jpg"
     }, {
         src: "/Propagation/img/sectionPages/photoWall/background.jpg"
@@ -64,8 +67,8 @@ function setupManifest() {
     }, {
         src: "/Propagation/img/sectionPages/timeStation/background.jpg"
     }, ];
+    console.log("222");
 }
-
 function startPreload() {
     preload = new createjs.LoadQueue(true);
     preload.addEventListener("progress", handleFileProgress);
@@ -78,6 +81,7 @@ function startPreload2() {
     preload2 = new createjs.LoadQueue(true);
     preload2.setMaxConnections(1);
     preload2.loadManifest(mainfest2);
+    console.log("begin");
 }
 setupManifest();
 startPreload();
@@ -135,8 +139,8 @@ function startingAnimation() {
     setTimeout(function () {
         light.setAttribute("src", "./img/startingPage/greenlight.svg");
         toMainPage.style.display = "block";
+        setupManifest2();
+        startPreload2();
     }, 1600);
 
 }
-
-startPreload2();
