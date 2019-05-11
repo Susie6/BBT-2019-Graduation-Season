@@ -51,17 +51,19 @@ function setupManifest() {
         src: "/Propagation/img/startingPage/background.jpg"
     }, {
         src: "/Propagation/img/mainPage/background.jpg"
-    }, {
-        src: "/Propagation/img/sectionPages/photoWall/background.jpg"
-    }, {
-        src: "/Propagation/img/sectionPages/timeCapsule/background.jpg"
-    }, {
-        src: "/Propagation/img/sectionPages/wishDream/background.jpg"
-    }, {
-        src: "/Propagation/img/sectionPages/creativeMarket/background.jpg"
-    }, {
-        src: "/Propagation/img/sectionPages/timeStation/background.jpg"
-    }, {
+    }, 
+    // {
+    //     src: "/Propagation/img/sectionPages/photoWall/background.jpg"
+    // }, {
+    //     src: "/Propagation/img/sectionPages/timeCapsule/background.jpg"
+    // }, {
+    //     src: "/Propagation/img/sectionPages/wishDream/background.jpg"
+    // }, {
+    //     src: "/Propagation/img/sectionPages/creativeMarket/background.jpg"
+    // }, {
+    //     src: "/Propagation/img/sectionPages/timeStation/background.jpg"
+    // }, 
+    {
         src: "/Propagation/img/graduation.png"
     }, {
         src: "/Propagation/img/startingPage/redlight.svg"
