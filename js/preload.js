@@ -67,7 +67,6 @@ function setupManifest2(){
     }, {
         src: "./img/sectionPages/timeStation/background.jpg"
     }, ];
-    console.log("222");
 }
 function startPreload() {
     preload = new createjs.LoadQueue(true);
@@ -81,7 +80,6 @@ function startPreload2() {
     preload2 = new createjs.LoadQueue(true);
     preload2.setMaxConnections(1);
     preload2.loadManifest(mainfest2);
-    console.log("begin");
 }
 setupManifest();
 startPreload();

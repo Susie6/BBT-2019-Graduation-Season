@@ -67,29 +67,6 @@ function main_page() {
 
 function show(event) {
     var click = event.target.id;
-
-    // var ripple = document.getElementsByClassName("ripple");
-    // for (i = 0; i < ripple.length; i++) {
-    //     if (ripple[i] != null) {
-    //         ripple[i].parentNode.removeChild(ripple[i]);
-    //     }
-    // }
-
-    // var a = document.getElementById(click);
-    // var button_left = a.offsetLeft; 
-    // var button_top = a.offsetTop; 
-    // var button_width = a.offsetWidth; 
-    // var button_height = a.offsetHeight; 
-    // var ripple_width = button_width / 2;
-    // console.log(event.clientX);
-    // var ripple_x = event.clientX - button_left - ripple_width / 2;
-    // var ripple_y = event.clientY - button_top - ripple_width / 2;
-    // var act = document.getElementById("activities");
-    // act.appendChild("<div class='ripple' id='ripple'></div>");
-    // var ripple = document.getElementById("ripple");
-    // ripple.classList.add("rippleEffect");
-
-
     var show_this = document.getElementById(click + "Page");
     if (mainPage.classList.contains("fadeFromRight")) {
         mainPage.classList.remove("fadeFromRight");
@@ -161,7 +138,7 @@ function count() {
             }
         }
     };
-    xhttp.open("POST", "http://111.230.183.100/zongxuan/zongxuan.php", true);
+    xhttp.open("POST", "./backend/zongxuan.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     var name = "zongxuan";
     JSON.stringify(name);
@@ -196,7 +173,7 @@ function goTimeStation() {
             }
         }
     };
-    xhttp.open("POST", "http://111.230.183.100/zongxuan/DDL.php", true);
+    xhttp.open("POST", "./backend/DDL.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     var name = "lncz";
     JSON.stringify(name);
@@ -230,7 +207,7 @@ function goTimeCapsule() {
             }
         }
     };
-    xhttp.open("POST", "http://111.230.183.100/zongxuan/DDL.php", true);
+    xhttp.open("POST", "./backend/DDL.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     var name = "sgjn";
     JSON.stringify(name);
@@ -265,13 +242,12 @@ function goWishDream() {
             }
         }
     };
-    xhttp.open("POST", "http://111.230.183.100/zongxuan/DDL.php", true);
+    xhttp.open("POST", "./backend/DDL.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     var name = "xybkm"
     console.log(name);
     JSON.stringify(name);
     xhttp.send("name=" + name);
-    // window.location.href =
 }
 //记录引流数
 function countTimeStation() {
@@ -281,7 +257,7 @@ function countTimeStation() {
             console.log("流年车站");
         }
     };
-    xhttp.open("POST", "http://111.230.183.100/zongxuan/zongxuan.php", true);
+    xhttp.open("POST", "./backend/zongxuan.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     var name = "lncz";
     JSON.stringify(name);
@@ -295,7 +271,7 @@ function countTimeCapsule() {
             console.log("时光胶囊");
         }
     };
-    xhttp.open("POST", "http://111.230.183.100/zongxuan/zongxuan.php", true);
+    xhttp.open("POST", "./backend/zongxuan.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     var name = "sgjn";
     JSON.stringify(name);
@@ -309,7 +285,7 @@ function countWishDream() {
             console.log("许愿宝可梦");
         }
     };
-    xhttp.open("POST", "http://111.230.183.100/zongxuan/zongxuan.php", true);
+    xhttp.open("POST", "./backend/zongxuan.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     var name = "xybkm";
     console.log(name);
