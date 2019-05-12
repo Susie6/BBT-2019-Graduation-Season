@@ -62,7 +62,6 @@ function main_page() {
         startingPage.classList.remove("fadeOut");
         mainPage.classList.remove("fadeFromRight");
     }, 700);
-    console.log("页面切换");
 }
 
 function show(event) {
@@ -129,13 +128,7 @@ function count() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
-            var res = JSON.parse(xhttp.responseText);
-            if (res.errcode == 0) {
-                console.log(res.msg);
-                console.log("总访问次数：" + res.data.zongxuan + "次");
-            } else {
-                console.log(res.msg);
-            }
+            //console.log("zongxuan");
         }
     };
     xhttp.open("POST", "./backend/zongxuan.php", true);
@@ -159,8 +152,9 @@ function goTimeStation() {
             var endTime = new Date(end);
             var tips = document.getElementById("tips2");
             var msg = document.getElementById("msg2");
-            if (date < beginTime) {
-                msg.innerHTML = "活动开始时间<br />" + res.data.beginTime;
+            var time = begin.split(" ");
+            if (date <= beginTime) {
+                msg.innerHTML = "活动开始时间<br />" + time[0];
                 tips.style.display = "block";
                 tips.style.animation = "scaleIn 0.3s linear 0s 1 forwards";
             } else if (date >= endTime) {
@@ -185,16 +179,16 @@ function goTimeCapsule() {
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             var res = JSON.parse(xhttp.responseText);
-            console.log(res);
             var begin = res.data.beginTime.replace("-","/");
             var end = res.data.DDL.replace("-","/");
             var beginTime = new Date(begin);
             var endTime = new Date(end);
             var tips = document.getElementById("tips1");
             var msg = document.getElementById("msg1");
-            console.log("开始时间："+beginTime+"现在时间："+date+"结束时间："+endTime);
+            //console.log("开始时间："+beginTime+"现在时间："+date+"结束时间："+endTime);
+            var time = begin.split(" ");
             if (date <= beginTime) {
-                msg.innerHTML = "活动开始时间<br />" + res.data.beginTime;
+                msg.innerHTML = "活动开始时间<br />" + time[0];
                 tips.style.display = "block";
                 tips.style.animation = "scaleIn 0.3s linear 0s 1 forwards";
             } else if (date >= endTime) {
@@ -225,17 +219,15 @@ function goWishDream() {
             var endTime = new Date(end);
             var tips = document.getElementById("tips3");
             var msg = document.getElementById("msg3");
-            console.log(date);
-            if (date < beginTime) {
-                msg.innerHTML = "活动开始时间<br />" + res.data.beginTime;
+            var time = begin.split(" ");
+            if (date <= beginTime) {
+                msg.innerHTML = "活动开始时间<br />" + time[0];
                 tips.style.display = "block";
                 tips.style.animation = "scaleIn 0.3s linear 0s 1 forwards";
-                console.log("现在日期小");
             } else if (date >= endTime) {
                 msg.innerHTML = "活动已结束 <br />(≧ω≦)/";
                 tips.style.display = "block";
                 tips.style.animation = "scaleIn 0.3s linear 0s 1 forwards";
-                console.log("现在日期大");
             } else {
                 //跳转链接记得改哦
                 window.location.href = "https://www.baidu.com/";
@@ -245,7 +237,6 @@ function goWishDream() {
     xhttp.open("POST", "./backend/DDL.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     var name = "xybkm"
-    console.log(name);
     JSON.stringify(name);
     xhttp.send("name=" + name);
 }
@@ -288,7 +279,6 @@ function countWishDream() {
     xhttp.open("POST", "./backend/zongxuan.php", true);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     var name = "xybkm";
-    console.log(name);
     JSON.stringify(name);
     xhttp.send("name=" + name);
 }
