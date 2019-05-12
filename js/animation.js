@@ -146,8 +146,10 @@ function goTimeStation() {
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             var res = JSON.parse(xhttp.responseText);
-            var begin = res.data.beginTime.replace("-","/");
-            var end = res.data.DDL.replace("-","/");
+            // var begin = res.data.beginTime.replace("-","/");
+            // var end = res.data.DDL.replace("-","/");
+            var begin = res.data.beginTime;
+            var end = res.data.DDL;
             var beginTime = new Date(begin);
             var endTime = new Date(end);
             var tips = document.getElementById("tips2");
@@ -179,8 +181,10 @@ function goTimeCapsule() {
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             var res = JSON.parse(xhttp.responseText);
-            var begin = res.data.beginTime.replace("-","/");
-            var end = res.data.DDL.replace("-","/");
+            // var begin = res.data.beginTime.replace("-","/");
+            // var end = res.data.DDL.replace("-","/");
+            var begin = res.data.beginTime;
+            var end = res.data.DDL;
             var beginTime = new Date(begin);
             var endTime = new Date(end);
             var tips = document.getElementById("tips1");
@@ -213,8 +217,10 @@ function goWishDream() {
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             var res = JSON.parse(xhttp.responseText);
-            var begin = res.data.beginTime.replace("-","/");
-            var end = res.data.DDL.replace("-","/");
+            // var begin = res.data.beginTime.replace("-","/");
+            // var end = res.data.DDL.replace("-","/");
+            var begin = res.data.beginTime;
+            var end = res.data.DDL;
             var beginTime = new Date(begin);
             var endTime = new Date(end);
             var tips = document.getElementById("tips3");
