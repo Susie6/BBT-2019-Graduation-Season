@@ -23,21 +23,24 @@ body {
     background-repeat: no-repeat;
     overflow: hidden;
 }
-.loadingPage .loading{
+
+.loadingPage .loading {
     height: 10%;
     width: 40%;
     position: fixed;
     left: 30%;
     top: 43%;
 }
-.loadingPage .percent{
+
+.loadingPage .percent {
     position: relative;
     left: 44%;
     top: 48%;
-    width:10%;
+    width: 10%;
     height: auto;
     color: rgba(93, 95, 98, 0.95);
 }
+
 .loadingPage .whole {
     height: 8%;
     width: 72.2%;
@@ -148,6 +151,7 @@ body {
     box-shadow: inset 0 0px 1px rgba(0, 0, 0, 0.2),
         inset 0 -2px 1px rgba(0, 0, 0, 0.2);
 }
+
 .loadingPage .box {
     height: 2.8%;
     width: 73.5%;
@@ -155,9 +159,10 @@ body {
     bottom: 55.65%;
     background-color: rgba(0, 0, 0, 0);
     border: 2px solid;
-    border-color: rgba(106, 109, 116, 1);  
+    border-color: rgba(106, 109, 116, 1);
     border-radius: 5px;
 }
+
 @keyframes shift {
     to {
         background-position: -60px 100%;
@@ -321,6 +326,7 @@ body {
     -moz-animation: fadeOut linear 0.4s 0s 1 forwards;
     animation: fadeOut linear 0.4s 0s 1 forwards;
 }
+
 /* .mainPage.fadeIn {
     -webkit-animation: fadeIn linear 0.7s 0s 1 forwards;
     -moz-animation: fadeIn linear 0.7s 0s 1 forwards;
@@ -342,7 +348,7 @@ body {
 }
 
 .mainPage .activities {
-    margin-top: 8%;
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -357,45 +363,6 @@ body {
     min-width: 216px;
     min-height: 58px;
 }
-
-.mainPage .activity_last {
-    height: 15%;
-    width: 60%;
-    margin-bottom: 10%;
-    min-width: 216px;
-    min-height: 58px;
-}
-
-/* .ripple {
-    position: absolute;
-    border-radius: 50% 50%;
-    background: rgba(255, 255, 255, 0.4);
-    transform: scale(0);
-    -webkit-transform: scale(0);
-    opacity: 1;
-}
-
-.ripple.rippleEffect {
-    -webkit-animation: rippleDrop .6s linear;
-    animation: rippleDrop .6s linear;
-}
-
-@keyframes rippleDrop {
-
-    100% {
-        transform: scale(2);
-        -webkit-transform: scale(2);
-        opacity: 0;
-    }
-}
-
-@-webkit-keyframes rippleDrop {
-    100% {
-        transform: scale(2);
-        -webkit-transform: scale(2);
-        opacity: 0;
-    }
-} */
 
 .photoWallPage {
     background-image: url("../img/sectionPages/photoWall/background.jpg");
@@ -809,16 +776,20 @@ body {
     margin-left: 64%;
     margin-bottom: 11%;
 }
-#tips1{
+
+#tips1 {
     display: none;
 }
-#tips2{
+
+#tips2 {
     display: none;
 }
-#tips3{
+
+#tips3 {
     display: none;
 }
-.tips{
+
+.tips {
     position: absolute;
     bottom: 35%;
     transform-origin: center center;
@@ -828,12 +799,14 @@ body {
     height: auto;
     /* text-align: center; */
 }
-.tip{
+
+.tip {
     transform-origin: center center;
     width: 100%;
     height: 100%;
 }
-.msg{
+
+.msg {
     font-size: 18px;
     color: #666666;
     text-align: center;
@@ -844,7 +817,8 @@ body {
     letter-spacing: 0.2em;
     font-family: SimHei;
 }
-.ok{
+
+.ok {
     position: absolute;
     bottom: 20%;
     left: 15%;
@@ -857,11 +831,13 @@ body {
     font-size: 20px;
     font-family: SimHei;
 }
+
 @-webkit-keyframes scaleIn {
-    from{
+    from {
         -webkit-transform: scale(0);
         opacity: 0;
     }
+
     to {
         -webkit-transform: scale(1);
         opacity: 1;
@@ -869,10 +845,11 @@ body {
 }
 
 @-moz-keyframes scaleIn {
-    from{
+    from {
         -moz-transform: scale(0);
         opacity: 0;
     }
+
     to {
         -moz-transform: scale(1);
         opacity: 1;
@@ -880,20 +857,23 @@ body {
 }
 
 @keyframes scaleIn {
-    from{
+    from {
         transform: scale(0);
         opacity: 0;
     }
+
     to {
         transform: scale(1);
         opacity: 1;
     }
 }
+
 @-webkit-keyframes scaleOut {
-    from{
+    from {
         -webkit-transform: scale(1);
         opacity: 1;
     }
+
     to {
         -webkit-transform: scale(0);
         opacity: 0;
@@ -901,10 +881,11 @@ body {
 }
 
 @-moz-keyframes scaleOut {
-    from{
+    from {
         -moz-transform: scale(1);
         opacity: 1;
     }
+
     to {
         -moz-transform: scale(0);
         opacity: 0;
@@ -912,15 +893,17 @@ body {
 }
 
 @keyframes scaleOut {
-    from{
+    from {
         transform: scale(1);
         opacity: 1;
     }
+
     to {
         transform: scale(0);
         opacity: 0;
     }
 }
+
 @-webkit-keyframes fadeOut {
     to {
         opacity: 0.3;
@@ -940,27 +923,30 @@ body {
 }
 
 @-webkit-keyframes fadeIn {
-    0%{
+    0% {
         opacity: 0.5;
     }
+
     100% {
         opacity: 1;
     }
 }
 
 @-moz-keyframes fadeIn {
-    0%{
+    0% {
         opacity: 0.5;
     }
+
     100% {
         opacity: 1;
     }
 }
 
 @keyframes fadeIn {
-    0%{
+    0% {
         opacity: 0.5;
     }
+
     100% {
         opacity: 1;
     }
@@ -1001,6 +987,7 @@ body {
         transform: translateX(0);
     }
 }
+
 @-webkit-keyframes moveFromRight {
     from {
         opacity: 1;
@@ -1036,61 +1023,3 @@ body {
         transform: translateX(0);
     }
 }
-
-/* @keyframes walk {
-    0% {
-        background-position: 0px 0px;
-    }
-
-    10% {
-        background-position: -100px 0px;
-    }
-
-    20% {
-        background-position: -200px 0px;
-    }
-
-    30% {
-        background-position: -316px 0px;
-    }
-
-    40% {
-        background-position: -420px 0px;
-    }
-
-    50% {
-        background-position: -526px 0px;
-    }
-
-    60% {
-        background-position: -640px 0px;
-    }
-
-    70% {
-        background-position: -740px 0px;
-    }
-
-    80% {
-        background-position: -840px 0px;
-    }
-
-    90% {
-        background-position: -960px 0px;
-    }
-
-    92.5% {
-        background-position: -1070px 0px;
-    }
-
-    95% {
-        background-position: -1178px 0px;
-    }
-
-    97.5% {
-        background-position: -1274px 0px;
-    }
-
-    100% {
-        background-position: -1400px 0px;
-    }
-} */

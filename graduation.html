@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="./js/preloadjs.min.js"></script>
-    <link href="css/main.css" rel="stylesheet">   
+    <link href="css/main.css" rel="stylesheet">
     <title>毕业季总宣</title>
 </head>
+
 <body>
-    <div id="loadingPage" class="loadingPage">       
+    <div id="loadingPage" class="loadingPage">
         <img src="./img/loadingPage/loading.svg" id="loading" class="loading" alt="loading" name="loading">
         <div id="whole" class="whole">
             <div id="bicycle" class="bicycle">
@@ -41,59 +42,21 @@
     </div>
     <div id="mainPage" class="mainPage hide">
         <div class="grad_title">
-            <img src="./img/graduation.png" alt="graduation" class="graduation" id="graduation"
-                name="graduation">
+            <img src="./img/graduation.png" alt="graduation" class="graduation" id="graduation" name="graduation">
         </div>
         <div id="activities" class="activities">
-            <img src="./img/mainPage/photoWall.png" alt="activity" class="activity" id="photoWall" name="photoWall">
-            <img src="./img/mainPage/creativeMarket.png" alt="activity" class="activity" id="creativeMarket"
-                name="creativeMarket">
             <img src="./img/mainPage/timeCapsule.png" alt="activity" class="activity" id="timeCapsule"
                 name="timeCapsule">
             <img src="./img/mainPage/timeStation.png" alt="activity" class="activity" id="timeStation"
                 name="timeStation">
-            <img src="./img/mainPage/wishDream.png" alt="activity" class="activity_last" id="wishDream"
-                name="wishDream">
+            <img src="./img/mainPage/wishDream.png" alt="activity" class="activity" id="wishDream" name="wishDream">
+            <img src="./img/mainPage/creativeMarket.png" alt="activity" class="activity" id="creativeMarket"
+                name="creativeMarket">
+            <img src="./img/mainPage/photoWall.png" alt="activity" class="activity" id="photoWall" name="photoWall">
+
         </div>
     </div>
     <!-- <div id="sectionPages" class="sectionPages hide"> -->
-
-    <div id="photoWallPage" class="photoWallPage hide">
-        <div id="photoWallBack" class="goBack">
-            <img src="./img/sectionPages/photoWall/back.png" alt="back" class="back" id="photoWall_back"
-                name="photoWall_back">
-        </div>
-        <div id="titleBox_photoWall" class="titleBox">
-            <img src="./img/sectionPages/photoWall/title.png" alt="title" class="title" id="photoWall_title"
-                name="photoWall_title">
-        </div>
-        <div id="contentBox_photoWall" class="contentBox">
-            <p class="content">逻辑上的外祖母悖论与目前技术的显然不成熟限制了时空旅行
-                <br />人脑活力的减退让记忆按着艾宾浩斯画定的曲线逐渐失帧
-                <br />回溯上一个时间节点，最简便的方式仍是当时将其封存在照片里
-                <br />你是否保存着某些意义非凡的照片?</p>
-            <p class="content"><strong>6月6日至7日 一饭二饭</strong>
-                <br />我们提供了照片墙，帮助你向大家分享那时的激动、喜悦、骄傲……</p>
-        </div>
-    </div>
-    <div id="creativeMarketPage" class="creativeMarketPage hide">
-        <div id="creativeMarketBack" class="goBack">
-            <img src="./img/sectionPages/creativeMarket/back.png" alt="back" class="back" id="creativeMarket_back"
-                name="creativeMarket_back">
-        </div>
-        <div id="titleBox_creativeMarket" class="titleBox">
-            <img src="./img/sectionPages/creativeMarket/title.png" alt="title" class="title" id="creativeMarket_title"
-                name="creativeMarket_title">
-        </div>
-        <div id="contentBox_creativeMarket" class="contentBox">
-            <p class="content">悄然初夏，白驹过隙
-                <br /><strong>6月5日至7日二饭门前</strong>
-                <br />我们交汇在这个十字路口，即将启程
-                <br />我们通过设计将大学的点滴回忆融入到在创意市集的产品中，让它们和你的梦想
-                <br />一起伴你前行，让大学时光永不磨灭</p>
-            <p class="content">本次活动收益将以华南理工大学百步梯的名义爱心捐出。</p>
-        </div>
-    </div>
     <div id="timeCapsulePage" class="timeCapsulePage hide">
         <div id="timeCapsuleBack" class="goBack">
             <img src="./img/sectionPages/timeCapsule/back.png" alt="back" class="back" id="timeCapsule_back"
@@ -125,10 +88,9 @@
             alt="时光胶囊">
         <!-- </div> -->
         <div class="tips" id="tips1">
-            <img src="img/tips/box.png" name="tip" id="tip1" class="tip"
-                alt="提示">
-                <p class="msg" id="msg1">活动已结束 <br />(≧ω≦)/</p>
-                <button class="ok" id="ok1" onclick="disappear1()">知道了</button>
+            <img src="img/tips/box.png" name="tip" id="tip1" class="tip" alt="提示">
+            <p class="msg" id="msg1">活动已结束 <br />(≧ω≦)/</p>
+            <button class="ok" id="ok1" onclick="disappear1()">知道了</button>
         </div>
     </div>
     <div id="timeStationPage" class="timeStationPage hide">
@@ -155,10 +117,9 @@
             alt="流年车站">
         <!-- </div> -->
         <div class="tips" id="tips2">
-            <img src="img/tips/box.png" name="tip" id="tip2" class="tip"
-                alt="提示">
-                <p class="msg" id="msg2"></p>
-                <button class="ok" id="ok2"  onclick="disappear2()">知道了</button>
+            <img src="img/tips/box.png" name="tip" id="tip2" class="tip" alt="提示">
+            <p class="msg" id="msg2"></p>
+            <button class="ok" id="ok2" onclick="disappear2()">知道了</button>
         </div>
     </div>
     <div id="wishDreamPage" class="wishDreamPage hide">
@@ -189,17 +150,47 @@
         <!-- </div> -->
         <!-- </div> -->
         <div class="tips" id="tips3">
-            <img src="img/tips/box.png" name="tip" id="tip3" class="tip"
-                alt="提示">
-                <p class="msg" id="msg3"></p>
-                <button class="ok" id="ok3" onclick="disappear3()">知道了</button>
+            <img src="img/tips/box.png" name="tip" id="tip3" class="tip" alt="提示">
+            <p class="msg" id="msg3"></p>
+            <button class="ok" id="ok3" onclick="disappear3()">知道了</button>
         </div>
     </div>
-    <!-- <div class="tips" id="tips">
-        <img src="img/tips/box.png" name="tip" id="tip" class="tip"
-            alt="提示">
-            <button class="ok" id="ok">知道了</button>
-    </div>   -->
+    <div id="photoWallPage" class="photoWallPage hide">
+        <div id="photoWallBack" class="goBack">
+            <img src="./img/sectionPages/photoWall/back.png" alt="back" class="back" id="photoWall_back"
+                name="photoWall_back">
+        </div>
+        <div id="titleBox_photoWall" class="titleBox">
+            <img src="./img/sectionPages/photoWall/title.png" alt="title" class="title" id="photoWall_title"
+                name="photoWall_title">
+        </div>
+        <div id="creativeMarketPage" class="creativeMarketPage hide">
+            <div id="creativeMarketBack" class="goBack">
+                <img src="./img/sectionPages/creativeMarket/back.png" alt="back" class="back" id="creativeMarket_back"
+                    name="creativeMarket_back">
+            </div>
+            <div id="titleBox_creativeMarket" class="titleBox">
+                <img src="./img/sectionPages/creativeMarket/title.png" alt="title" class="title"
+                    id="creativeMarket_title" name="creativeMarket_title">
+            </div>
+            <div id="contentBox_creativeMarket" class="contentBox">
+                <p class="content">悄然初夏，白驹过隙
+                    <br /><strong>6月5日至7日二饭门前</strong>
+                    <br />我们交汇在这个十字路口，即将启程
+                    <br />我们通过设计将大学的点滴回忆融入到在创意市集的产品中，让它们和你的梦想
+                    <br />一起伴你前行，让大学时光永不磨灭</p>
+                <p class="content">本次活动收益将以华南理工大学百步梯的名义爱心捐出。</p>
+            </div>
+        </div>
+        <div id="contentBox_photoWall" class="contentBox">
+            <p class="content">逻辑上的外祖母悖论与目前技术的显然不成熟限制了时空旅行
+                <br />人脑活力的减退让记忆按着艾宾浩斯画定的曲线逐渐失帧
+                <br />回溯上一个时间节点，最简便的方式仍是当时将其封存在照片里
+                <br />你是否保存着某些意义非凡的照片?</p>
+            <p class="content"><strong>6月6日至7日 一饭二饭</strong>
+                <br />我们提供了照片墙，帮助你向大家分享那时的激动、喜悦、骄傲……</p>
+        </div>
+    </div>
     <script src="./js/animation.js"></script>
     <script src="./js/preload.js"></script>
 </body>
